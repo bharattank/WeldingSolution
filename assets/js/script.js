@@ -83,4 +83,18 @@ jQuery(document).ready(function ($) {
     var year = new Date().getFullYear();
     document.getElementById("year").innerHTML = year;
 
+    
+    // stickey-header
+    window.onscroll = function() { myFunction() };
+    var header = document.getElementById("stickey__header");
+    var sticky = header.offsetTop;
+
+    function myFunction() {
+        if (window.pageYOffset > sticky) {
+            header.classList.add("sticky");
+        } else {
+            header.classList.remove("sticky");
+        }
+    }
+
 });
