@@ -14,9 +14,9 @@
 
 <body>
     <!-- Hero Section & Header -->
-    <div class="ws-hero-section-main ws-hero-section-main-welding ws-hero-section-main-us">
+    <div class="ws-hero-section-main ws-hero-section-main-welding ws-hero-section-main-us position-relative">
         <div class="container">
-            <header class="ws-header">
+            <header class="ws-header" id="stickey__header">
                 <div class="ws-hero-inner-main">
                     <nav class="navbar navbar-expand-lg navbar-light">
                         <div class="container-fluid">
@@ -30,17 +30,25 @@
                               </div>
                             </div>
                           </button>
-                          <div class="collapse navbar-collapse ws-nav-menu justify-content-between w-100" id="navbar-content">
+                          <div class="collapse navbar-collapse ws-nav-menu justify-content-between" id="navbar-content">
                             <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
                               <li class="nav-item">
                                 <a class="nav-link d-flex justify-content-center align-items-center flex-column" aria-current="page" href="welding.html">Welding</a>
                               </li>
                               <li class="nav-item">
-                                <a class="nav-link d-flex justify-content-center align-items-center flex-column" aria-current="page" href="index.html">Other
+                                <a class="nav-link dropdown-toggle d-flex justify-content-center align-items-center flex-column" aria-current="page" href="index.html" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Other
                                     services</a>
+                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <li><a class="dropdown-item" href="#">Steel Welding</a></li>
+                                        <li><a class="dropdown-item" href="#">Metal Works</a></li>
+                                        <li><a class="dropdown-item" href="#">Pipe Welding</a></li>
+                                        <li><a class="dropdown-item" href="#">Manufacturing</a></li>
+                                        <li><a class="dropdown-item" href="#">Fabrication</a></li>
+                                        <li><a class="dropdown-item" href="#">Aluminum system</a></li>
+                                    </ul>
                               </li>
                               <li class="nav-item">
-                                <a class="nav-link d-flex justify-content-center align-items-center flex-column" aria-current="page" href="us.html"> About</a>
+                                <a class="nav-link d-flex justify-content-center align-items-center flex-column" aria-current="page" href="us.html">About</a>
                               </li>
                               <li class="nav-item">
                                 <a class="nav-link d-flex justify-content-center align-items-center flex-column" aria-current="page" href="blog-full-width.html">Blog</a>
@@ -60,6 +68,7 @@
                 <h1 class="hero-heading ">Solution Mig Mag</h1>
             </div>
         </div>
+        <div class="hero__overlay position-absolute"></div>
     </div>
     <!-- Business Help -->
     <div class="help-business help-business-us">
