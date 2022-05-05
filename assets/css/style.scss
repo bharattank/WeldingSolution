@@ -1,0 +1,3049 @@
+$primary_color: #002639;
+$secondary_color: #FF5134;
+$page_heading: 100px;
+$text_white: #fff;
+$font-family-exo: 'Exo';
+$font-family-open-sons : 'Open Sans';
+@mixin Welding-btn {
+    text-decoration: none;
+    color: $text_white;
+    background-color: $secondary_color;
+    box-shadow: 6px 6px 0px #FFCEC6;
+    transition: 500ms all;
+    text-transform: uppercase;
+    &:hover {
+        box-shadow: none;
+        transition: 500ms all;
+    }
+}
+
+body {
+    font-family: $font-family-exo ;
+}
+.container {
+    max-width: 1450px;
+}
+.exo {
+    font-family: $font-family-exo ;
+}
+.sans {
+    font-family: $font-family-open-sons ;
+}
+.footer-container {
+    max-width: 1657px;
+    margin: auto;
+    padding: 0 15px;
+}
+a {
+    text-decoration: none;
+}
+ul li,
+ol li {
+    list-style-type: none;
+}
+img {
+    transition: .5s all;
+    &:hover {
+        transform: rotate(1deg);
+    }
+}
+
+// Header & Hero Section
+.ws-hero-section-main {
+    background-image: url("../images/BG\ Header\ INICIO.png");
+    background-position: 0% 0%;
+    background-repeat: no-repeat;
+    background-clip: padding-box;
+    background-size: cover;
+    padding: 94px 0 300px 0;
+    .ws-header {
+        padding-bottom: 168px;
+    }
+    .ws-hero-inner-main {
+        .ws-nav-menu {
+            max-width: 1000px;
+        }
+        ul {
+            margin: 0;
+            li{
+                list-style-type: none;
+                padding: 0 25px;
+                transition: all .5s;
+                &:hover>a::after {
+                    content: "";
+                    display: block;
+                    width: 60px;
+                    height: 7px;
+                    background: $secondary_color;
+                    transition: all .5s;
+                }
+                &:hover>a {
+                    color: $secondary_color !important;
+                    transition: all .5s;
+                }
+                a {
+                    text-decoration: none;
+                    font-size: 30px;
+                    color: $text_white !important;
+                    &::after {
+                        content: "";
+                        display: block;
+                        width: 60px;
+                        height: 7px;
+                        background: transparent;
+                    }
+                }
+            }
+        }
+        .ws-hero-button {
+            a {
+                @include Welding-btn;
+                padding: 17px 64px;
+                font-size: 22px;    
+            }
+        }
+    }
+    .ws-hero-section-down {
+        .hero-heading {
+            font-size: $page_heading;
+            color: $text_white;
+            max-width: 1094px;
+            line-height: 120px;
+            margin-bottom: 30px;
+        }
+        .ws-description {
+            max-width: 840px;
+            font-size: 30px;
+            line-height: 45px;
+            color: $text_white;
+            margin-bottom: 50px;
+        }
+        .ws-hero-down-btn {
+            a {
+                @include Welding-btn;
+                padding: 17px 64px;
+                font-size: 22px;
+            }
+        }
+    }
+}
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+.dropdown-menu{
+    &.show{
+        -webkit-animation: fadeIn 0.3s alternate;
+         animation: fadeIn 0.3s alternate;
+    }
+}
+.nav-item.dropdown.dropdown-mega{
+    position: static;
+    .dropdown-menu{
+        width: 90%;
+        top: auto;
+        left: 5%;
+    }
+}
+.navbar-toggler{
+    border: none;
+    padding: 0;
+    outline: none;
+    border-color: $text_white !important;
+    &:focus{
+        box-shadow: none !important;
+    }
+    .hamburger-toggle{
+        position: relative;
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        z-index: 11;
+        float: right;
+        .hamburger {
+            position: absolute;
+            transform: translate(-50%, -50%) rotate(0deg);
+            left: 50%;
+            top: 50%;
+            width: 50%;
+            height: 50%;
+            pointer-events: none;
+            span {
+                width: 100%;
+                height: 4px;
+                position: absolute;
+                background: $text_white;
+                border-radius: 2px;
+                z-index: 1;
+                transition: transform 0.2s cubic-bezier(0.77,0.2,0.05,1.0), background 0.2s cubic-bezier(0.77,0.2,0.05,1.0), all 0.2s ease-in-out;
+                left: 0px;
+                &:first-child{
+                    top: 10%;
+                    transform-origin: 50% 50%;
+                    transform: translate(0% -50%) !important;
+                }
+                &:nth-child(2){
+                    top: 50%;
+                    transform: translate(0,-50%);
+                }
+                &:last-child{
+                    left: 0px;
+                    top: auto;
+                    bottom: 10%;
+                    transform-origin: 50% 50%;
+                }
+            }
+            &.active{
+                span {
+                    position: absolute;
+                    margin: 0;
+                    &:first-child{
+                        top: 45%;
+                        transform: rotate(45deg);
+                    }
+                    &:nth-child(2){
+                        left: 50%;
+                        width: 0px;
+                    }
+                    &:last-child{
+                        top: 45%;
+                        transform: rotate(-45deg);
+                    }
+                }
+            }
+        }
+    }
+}
+// Header & Hero Section END Media
+@media screen and (max-width: 991px) {
+    .ws-hero-section-main {
+        padding: 30px 0 100px 0;
+        .ws-header {
+            padding-bottom: 50px;
+        }
+        .ws-hero-section-down {
+            .hero-heading {
+                font-size: 60px;
+                line-height: 70px;
+                margin-bottom: 20px;
+            }
+            .ws-description {
+                font-size: 25px;
+                line-height: 35px;
+                margin-bottom: 35px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .ws-hero-section-main {
+        padding: 20px 0 50px 0;
+        .ws-header {
+            padding-bottom: 20px;
+        }
+        .ws-hero-section-down {
+            .hero-heading {
+                font-size: 40px;
+                line-height: 50px;
+            }
+            .ws-description {
+                font-size: 20px;
+                line-height: 30px;
+                margin-bottom: 30px;
+            }
+            .ws-hero-down-btn {
+                a {
+                    padding: 15px 15px;
+                    font-size: 20px;
+                }
+            }
+        }
+        .ws-hero-inner-main {
+            ul {
+                li {
+                    a {
+                        font-size: 22px;
+                        line-height: normal;
+                    }
+                }
+            }
+            .ws-hero-button {
+                a {
+                    padding: 15px 15px;
+                    font-size: 20px;
+                }
+            }
+        }
+        .navbar-toggler {
+            .hamburger-toggle {
+                width: 35px;
+                height: 35px;
+                .hamburger {
+                    width: 65%;
+                    height: 65%;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 480px) {
+    .ws-hero-section-main {
+        padding: 20px 0 30px 0;
+        .ws-header {
+        }
+        .ws-hero-section-down {
+            .hero-heading {
+                font-size: 33px;
+                line-height: 40px;
+            }
+            .ws-description {
+                font-size: 16px;
+                line-height: 25px;
+            }
+            .ws-hero-down-btn {
+                a {
+                    padding: 15px 15px;
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}
+// Header & Hero Section END
+
+// <!-- Business Help -->
+.help-business {
+    padding: 122px 0 160px 0;
+    .help-business-logo {
+        padding-bottom: 30px;
+    }
+    .help-business-content {
+        padding-right: 70px;
+        .other-heading {
+            font-size: $page_heading;
+            line-height: 120px;
+            color: $primary_color;
+            max-width: 720px;
+            width: 100%;
+        }
+        .ws-description {
+            font-size: 35px;
+            line-height: 48px;
+            color: #212121;
+            margin-top: 30px;
+            margin-bottom: 90px;
+        }
+        .help-business-btn {
+            a {
+                @include Welding-btn;
+                padding: 17px 64px;
+                font-size: 22px;
+            }
+        }
+    }
+    .business-right-box {
+        color: $text_white;
+        .mb-minus {
+            margin-top: 35px;
+        }
+        .help-business-box {
+            padding: 45px 5px 30px 31px;
+            min-height: 320px;
+            .other-heading {
+                font-size: 34px;
+                line-height: 40px;
+                max-width: 268px;
+            }
+            .ws-description {
+                font-size: 18px;
+                line-height: 24px;
+                max-width: 283px;
+            }
+        }
+        .help-box-one {
+            background-color: $primary_color;
+            margin-bottom: 25px;
+            background-image: url('../images/Icon\ PRECIO.svg');
+            background-repeat: no-repeat;
+            background-size: 75%;
+            background-position: right top;
+        }
+        .help-box-two {
+            background-color: $secondary_color;
+            background-image: url('../images/ICon\ CALIDAD.svg');
+            background-repeat: no-repeat;
+            background-size: 60%;
+            background-position: right top;
+        }
+        .help-box-three {
+            background-color: $primary_color;
+            background-image: url('../images/Icon\ PRECIO.svg');
+            background-repeat: no-repeat;
+            background-size: 75%;
+            background-position: right top;
+        }
+        .help-box-four {
+            background-color: $secondary_color;
+            margin-bottom: 25px;
+            background-image: url('../images/Icon\ SALARIO.svg');
+            background-repeat: no-repeat;
+            background-size: 75%;
+            background-position: right center;
+        }
+    }
+}
+// Business Help Media 
+
+@media screen and (max-width: 991px) {
+    .help-business {
+        padding: 50px 0 70px 0;
+        .help-business-logo {
+            padding-bottom: 30px;
+        }
+        .help-business-content {
+            padding-right: 0;
+            .other-heading {
+                font-size: 60px;
+                line-height: 70px;
+            }
+            .ws-description {
+                font-size: 25px;
+                line-height: 35px;
+                margin-bottom: 35px;
+            }
+            .help-business-btn {
+                a {
+                    padding: 17px 64px;
+                    font-size: 27px;
+                    text-decoration: none;
+                    color: $text_white;
+                    background-color: $secondary_color;
+                    box-shadow: 6px 6px 0px #FFCEC6;
+                    transition: 500ms all;
+                    text-transform: uppercase;
+                    &:hover {
+                        box-shadow: none;
+                        transition: 500ms all;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .help-business {
+        padding: 20px 0 50px 0;
+        .help-business-content {
+            padding-right: 0;
+            .other-heading {
+                font-size: 40px;
+                line-height: 50px;
+            }
+            .ws-description {
+                font-size: 20px;
+                line-height: 30px;
+                margin-bottom: 30px;
+            }
+            .help-business-btn {
+                a {
+                    padding: 15px 15px;
+                    font-size: 20px;
+                }
+            }
+        }
+        .business-right-box {
+            .mb-minus {
+                margin-top: 25px;
+            }
+            .help-business-box {
+                padding: 20px 5px 10px 10px;
+                min-height: 200px;
+                .other-heading {
+                    font-size: 34px;
+                    line-height: 40px;
+                    max-width: 100%;
+                    width: 100%;
+                }
+                .ws-description {
+                    font-size: 18px;
+                    line-height: 24px;
+                    max-width: 100%;
+                    width: 100%;
+                }
+            }
+            .help-box-one {
+                background-color: $primary_color;
+                margin-bottom: 25px;
+                margin-top: 25px;
+            }
+            .help-box-two {
+                background-color: $secondary_color;
+            }
+            .help-box-three {
+                background-color: $primary_color;
+            }
+            .help-box-four {
+                background-color: $secondary_color;
+                margin-bottom: 25px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .help-business {
+        padding: 20px 0 30px 0;
+        .help-business-logo {
+            padding-bottom: 10px;
+        }
+        .help-business-content {
+            padding-right: 0;
+            .other-heading {
+                font-size: 33px;
+                line-height: 40px;
+            }
+            .ws-description {
+                font-size: 16px;
+                line-height: 25px;
+                margin-bottom: 30px;
+            }
+        }
+        .business-right-box {
+            .mb-minus {
+                margin-top: 25px;
+            }
+            .help-business-box {
+                padding: 20px 5px 10px 10px;
+                min-height: 200px;
+                .other-heading {
+                    font-size: 22px;
+                    line-height: 26px;
+                }
+                .ws-description {
+                    font-size: 16px;
+                    line-height: 20px;
+                }
+            }
+        }
+    }
+}
+// <!-- Business Help END -->
+
+// Experience and quality commitment 
+
+.experience-quality {
+    padding-bottom: 100px;
+    .experience-left-content {
+        padding-left: 80px;
+        .other-heading-h6 {
+            font-size: 35px;
+            line-height: 45px;
+            color: $secondary_color;
+        }
+        .other-heading {
+            font-size: $page_heading;
+            line-height: 120px;
+            color: $primary_color;
+            max-width: 720px;
+            width: 100%;
+        }
+        .ws-description {
+            font-size: 30px;
+            line-height: 42px;
+            color: #212121;
+        }
+    }
+}
+@media screen and (max-width: 1440px) {
+    .experience-quality {
+        padding-bottom: 70px;
+        .experience-left-content {
+            padding-left: 50px;
+            .other-heading {
+                font-size: 60px;
+                line-height: 70px;
+            }
+            .ws-description {
+                font-size: 22px;
+                line-height: 30px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) and (min-width: 992px) {
+    .experience-quality {
+        padding-bottom: 0;
+        .experience-left-content {
+            padding-left: 50px;
+            .other-heading {
+                font-size: 50px;
+                line-height: 60px;
+            }
+            .ws-description {
+                font-size: 18px;
+                line-height: 24px;
+            }
+        }
+    }
+}
+@media screen and (max-width: 991px) {
+    .experience-quality {
+        padding-bottom: 0;
+        .experience-left-content {
+            padding-left: 15px;
+            .other-heading {
+                font-size: 60px;
+                line-height: 70px;
+            }
+            .ws-description {
+                font-size: 25px;
+                line-height: 35px;
+            }
+        }
+    }
+}
+@media screen and (max-width: 767px) {
+    .experience-quality {
+        .experience-left-content {
+            padding-left: 15px;
+            .other-heading-h6 {
+                font-size: 26px;
+                line-height: 34px;
+            }
+            .other-heading {
+                font-size: 40px;
+                line-height: 50px;
+            }
+            .ws-description {
+                font-size: 20px;
+                line-height: 28px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .experience-quality {
+        .experience-left-content {
+            .other-heading {
+                font-size: 33px;
+                line-height: 40px;
+            }
+        }
+    }
+}
+
+// Experience and quality commitment END
+
+// <!-- Company trust -->
+.company-trust {
+    padding: 80px 0 100px 0;
+    .company-trust-title {
+        text-align: center;
+        font-size: 25px;
+        line-height: 48px;
+        color: #6F6F6F;
+        padding-bottom: 90px;
+    }
+    .company__logo_slide__main {
+        .slick-slide {
+            img {
+                margin: auto;
+            }
+        }
+    }
+}
+
+// Company trust Media
+@media screen and (max-width: 991px) {
+    .company-trust {
+        padding: 50px 0 70px 0;
+        .company-trust-title {
+            padding-bottom: 30px;
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .company-trust {
+        padding: 20px 0 40px 0;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .company-trust {
+        padding: 20px 0 30px 0;
+        .company-trust-title {
+            padding-bottom: 0;
+            font-size: 20px;
+            line-height: 28px
+        }
+    }
+}
+// <!-- Types of welding -->
+
+.welding-type {
+    background-image: url("../images/BG\ -\ Tipos\ de\ soldadura.png");
+    background-position: 0% 0%;
+    background-repeat: no-repeat;
+    background-clip: padding-box;
+    background-size: cover;
+    padding: 140px 0 0 0;
+    .welding-type-inner-main {
+        .welding-type-inner-top {
+            .other-heding {
+                font-size: $page_heading;
+                line-height: 120px;
+                color: $text_white;
+            }
+            .ws-description {
+                font-size: 20px;
+                line-height: 28px;
+                color: $text_white;
+            }
+        }
+        .welding-type-inner-bottom {
+            position: relative;
+            bottom: -120px;
+            .welding-type-box {
+                min-height: 685px;
+                padding: 51px 5px 85px 34px;
+                .box-inner-up {
+                    font-size: 43px;
+                    line-height: 52px;
+                    max-width: 207px;
+                    color: $text_white;
+                }
+                .box-inner-down {
+                    a {
+                        font-size: 36px;
+                        line-height: 44px;
+                        color: $text_white;
+                        text-decoration: none;
+                    }
+                }
+                .box__inner_overlay {
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    background-color: $primary_color;
+                    overflow: hidden;
+                    opacity: 0.3;
+                    width: 100%;
+                    height: 100%;
+                    transition: .5s ease;
+                }
+                &:hover {
+                    .box__inner_overlay {
+                        bottom: 100%;
+                        height: 0;
+                    }
+                }
+            }
+            .welding-type-box-one {
+                background-image: url("../images/FRANJA\ MIG-MAG.png");
+                background-position: 0% 0%;
+                background-repeat: no-repeat;
+                background-clip: padding-box;
+                background-size: cover;
+            }
+            .welding-type-box-two {
+                background-image: url("../images/Rectangle\ TIG.png");
+                background-position: 0% 0%;
+                background-repeat: no-repeat;
+                background-clip: padding-box;
+                background-size: cover;
+                .box-inner-up {
+                    color: $primary_color;
+                }
+                .box-inner-down { 
+                    a {
+                        color: $primary_color;
+                    }
+                }
+            }
+            .welding-type-box-three {
+                background-image: url("../images/Franja\ RESISTENCIA.png");
+                background-position: 0% 0%;
+                background-repeat: no-repeat;
+                background-clip: padding-box;
+                background-size: cover;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .welding-type{
+        padding: 50px 0;
+        .welding-type-inner-main {
+            .welding-type-inner-top {
+                padding-bottom: 50px;
+                .other-heding {
+                    font-size: 60px;
+                    line-height: 70px;
+                }
+                .ws-description {
+                    font-size: 20px;
+                    line-height: 28px;
+                    color: $text_white;
+                }
+            }
+            .welding-type-inner-bottom {
+                bottom: 0;
+                .welding-type-box {
+                    min-height: 200px;
+                    padding: 30px;
+                    .box-inner-up {
+                        font-size: 34px;
+                        line-height: 40px;
+                        max-width: unset;
+                    }
+                    .box-inner-down {
+                        font-size: 24px;
+                        line-height: 32px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .welding-type{
+        padding: 30px 0;
+        .welding-type-inner-main {
+            .welding-type-inner-top {
+                padding-bottom: 10px;
+                .other-heding {
+                    font-size: 40px;
+                    line-height: 50px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .welding-type{
+        padding: 30px 0;
+        .welding-type-inner-main {
+            .welding-type-inner-top {
+                .other-heding {
+                    font-size: 33px;
+                    line-height: 40px;
+                }
+            }
+        }
+    }
+}
+
+// <!-- What can you expect from us -->
+.can-expect {
+    padding: 320px 0 100px 0;
+    .can-expect-left {
+        .other-heading {
+            font-size: 80px;
+            line-height: 100px;
+            color: $primary_color;
+        }
+        .ws-description {
+            font-size: 35px;
+            line-height: 48px;
+            color: #212121;
+            margin: 40px 0 60px 0;
+        }
+        .expect-list {
+            li {
+                list-style-type: none;
+                svg {
+                    min-width: 30px;
+                }
+                a {
+                    font-size: 28px;
+                    line-height: 50px;
+                    color: #212121;
+                    text-decoration: none;
+                    padding-left: 15px;
+                }
+            }
+        }
+    }
+    .expect-right {
+        padding: 45px;
+        background-color: #F4F4F4;
+        .other-heading {
+            font-size: 34px;
+            line-height: 30px;
+            color: #212121;
+        }
+        .ws-description {
+            font-size: 20px;
+            line-height: 28px;
+            color: $primary_color;
+            margin-top: 25px;
+            max-width: 530px;
+        }
+    }
+}
+@media screen and (max-width: 991px) {
+    .can-expect {
+        padding: 50px 0 60px 0;
+        .can-expect-left {
+            .other-heading {
+                font-size: 60px;
+                line-height: 70px;
+            }
+            .ws-description {
+                font-size: 20px;
+                line-height: 28px;
+                margin: 20px 0 30px 0;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .can-expect {
+        padding: 30px 0 30px 0;
+        .can-expect-left {
+            .other-heading {
+                font-size: 40px;
+                line-height: 50px;
+            }
+            .expect-list {
+                li {
+                    a {
+                        font-size: 20px;
+                        line-height: 35px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 480px) {
+    .can-expect {
+        .can-expect-left {
+            .other-heading {
+                font-size: 33px;
+                line-height: 40px;
+            }
+            .expect-list {
+                li {
+                    a {
+                        font-size: 20px;
+                        line-height: 35px;
+                    }
+                }
+            }
+        }
+        .expect-right {
+            padding: 20px;
+            .ws-description {
+                font-size: 17px;
+                line-height: 25px;
+            }
+        }
+    }
+}
+
+// <!-- Other services -->
+.other-service {
+    padding: 90px 0 200px 0;
+    .other-service-bg {
+        background-image: url("../images/BG\ Otros\ Servicios.png");
+        background-position: 0% 0%;
+        background-repeat: no-repeat;
+        background-clip: padding-box;
+        background-size: cover;
+        padding: 100px 0;
+        .other-service-left {
+            left: -100px;
+        }
+        .other-service-right {
+            padding-top: 70px;
+            .other-heading {
+                font-size: $page_heading;
+                line-height: 100px;
+                color: $text_white;
+                max-width: 670px;
+            }
+            .ws-description {
+                font-size: 20px;
+                line-height: 28px;
+                color: $text_white;
+                margin-bottom: 40px;
+                max-width: 440px;
+            }
+            .services-list {
+                padding: 0;
+                li {
+                    list-style-type: none;
+                    a {
+                        font-size: 30px;
+                        line-height: 55px;
+                        color: $text_white;
+                        text-decoration: none;
+                        &::after {
+                            content: "";
+                            display: block;
+                            width: 100%;
+                            height: 3px;
+                            background: $secondary_color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 991px) {
+    .other-service {
+        padding: 0px 0 70px 0;
+        .other-service-bg {
+            padding: 0 0 50px 0;
+            .other-service-left {
+                left: 0;
+                img {
+                    width: 100%;
+                }
+            }
+            .other-service-right {
+                padding-left: 15px;
+                .other-heading {
+                    font-size: 60px;
+                    line-height: 70px;
+                }
+                .ws-description {
+                    margin-bottom: 30px;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 767px) {
+    .other-service {
+        padding: 0px 0 30px 0;
+        .other-service-bg {
+            padding: 0 0 30px 0;
+            .other-service-right {
+                padding-top: 30px;
+                padding-left: 15px;
+                .other-heading {
+                    font-size: 40px;
+                    line-height: 50px;
+                }
+                .ws-description {
+                    margin-bottom: 20px;
+                }
+                .services-list {
+                    li {
+                        a {
+                            font-size: 20px;
+                            line-height: 35px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 480px) {
+    .other-service {
+        .other-service-bg {
+            .other-service-right {
+                padding-top: 30px;
+                padding-left: 15px;
+                .other-heading {
+                    font-size: 33px;
+                    line-height: 40px;
+                }
+            }
+        }
+    }
+}
+// <!-- services card --> 
+.service--card {
+    padding: 100px 0;
+    .service--card__inner {
+        max-width: 1150px;
+        .service--card__main {
+            .service--card__left--down {
+                max-width: 515px;
+                padding: 50px;
+                background-color: $primary_color;
+                .other-heading {
+                    font-size: 32px;
+                    line-height: 78px;
+                    color: $text_white;
+                    border-bottom: 1px solid gray;
+                }
+                .card-list {
+                    min-height: 230px;
+                    padding: 0;
+                    margin-bottom: 15px;
+                    li {
+                        a {
+                            font-size: 20px;
+                            line-height: 40px;
+                            text-decoration: none;
+                            color: $text_white;
+                            padding-left: 15px;
+                        }
+                    }
+                }
+                .know-more {
+                    font-size: 30px;
+                    line-height: 26px;
+                    color: $text_white;
+                    text-decoration: none;
+                    font-weight: 900;
+                }
+            }
+            .right-down {
+                background-color: #F4F4F4;
+                .other-heading {
+                    color: $secondary_color;
+                    border-bottom: 1px solid $primary_color;
+                }
+                .card-list {
+                    li {
+                        list-style-type: none;
+                        a {
+                            text-decoration: none;
+                            color: $primary_color;
+                        }
+                    }
+                }
+                .know-more {
+                    color: $primary_color;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 1050px) {
+    .service--card {
+        padding: 80px 0;
+        .service--card__inner {
+            .service--card__main {
+                .service--card__left--down {
+                    padding: 35px;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 991px) {
+    .service--card {
+        padding: 0 0 50px;
+        .service--card__inner {
+            .service--card__main {
+                .service--card__left--down {
+                    padding: 20px;
+                    .other-heading {
+                        font-size: 28px;
+                        line-height: 60px;
+                    }
+                    .card-list {
+                        min-height: 230px;
+                        padding: 0;
+                        margin-bottom: 15px;
+                        li {
+                            a {
+                                font-size: 20px;
+                                line-height: 40px;
+                                padding-left: 15px;
+                            }
+                        }
+                    }
+                    .know-more {
+                        font-size: 30px;
+                        line-height: 26px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 767px) {
+    .service--card {
+        padding: 0 0 50px;
+        .service--card__inner {
+            .service--card__main {
+                .service--card__left--up {
+                    img {
+                        width: 100%;
+                    }
+                }
+                .service--card__left--down {
+                    max-width: 100%;
+                    .other-heading {
+                        line-height: 35px;
+                    }
+                    .card-list {
+                        min-height: auto;
+                        li {
+                            a {
+                                font-size: 18px;
+                                line-height: 30px;
+                                padding-left: 15px;
+                            }
+                        }
+                    }
+                    .know-more {
+                        font-size: 20px;
+                        line-height: 22px;
+                    }
+                }
+            }
+        }
+    }
+}
+// <!-- Production Process --> 
+.production--process {
+    background-image: url("../images/BG\ -\ Contacto.png");
+    background-position: 0% 0%;
+    background-repeat: no-repeat;
+    background-clip: padding-box;
+    background-size: cover;
+    padding: 100px 0;
+    .production--process__left {
+        .other-heding {
+            font-size: 55px;
+            line-height: 66px;
+            color: $text_white;
+            margin: 50px 0;
+            max-width: 800px;
+        }
+        .ws-description {
+            font-size: 35px;
+            line-height: 45px;
+            color: $text_white;
+            max-width: 630px;
+        }
+    }
+    .production--process__right {
+        .production--process__right--form {
+            background-color: #F4F4F4;
+            padding: 45px;
+            input {
+                &focus {
+                    border: 0;
+                    box-shadow: none;
+                }
+            }
+            .pp-btn {
+                padding: 8px 50px;
+                font-size: 20px;
+                border: 0;
+                margin-top: 20px;
+                @include Welding-btn;
+            }
+        }
+    }
+}
+@media screen and (max-width: 1300px) {
+    .production--process {
+        .production--process__left {
+            .other-heding {
+                font-size: 45px;
+                line-height: 53px;
+            }
+        }
+    }
+}
+@media screen and (max-width: 991px) {
+    .production--process {
+        padding: 50px 0;
+        .production--process__left {
+            .production--process__right {
+                .production--process__right--img {
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 767px) {
+    .production--process {
+        padding: 30px 0;
+        .production--process__left {
+            .other-heding {
+                font-size: 35px;
+                line-height: 45px;
+                margin: 30px 0;
+            }
+            .ws-description {
+                font-size: 25px;
+                line-height: 35px;
+            }
+        }
+        .production--process__right {
+            .production--process__right--form {
+                padding: 15px;
+            }
+        }
+    }
+}
+@media screen and (max-width: 480px) {
+    .production--process {
+        .production--process__left {
+            .other-heding {
+                font-size: 28px;
+                line-height: 35px;
+            }
+            .ws-description {
+                font-size: 20px;
+                line-height: 37px;
+            }
+        }
+    }
+}
+// <!-- Contact Us -->
+.contact--us {
+    padding: 110px 0;
+    .contact--us__box {
+        a {
+            text-decoration: none;
+            text-align: right;
+            .ws-description {
+                font-size: 24px;
+                line-height: 33px;
+                color: $primary_color;
+                padding-right: 29px;
+                margin: 0;
+                b {
+                    margin-top: 7px;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 991px) {
+    .contact--us {
+        padding: 50px 0;
+        .contact--us__box {
+            a {
+                text-align: left;
+                .ws-description {
+                    padding-right: 0;
+                    padding-left: 29px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .contact--us {
+        padding: 30px 0;
+        .contact--us__box {
+            a {
+                text-align: left;
+                flex-direction: column;
+                align-items: flex-start !important;
+                margin-bottom: 20px;
+                .ws-description {
+                    padding-right: 0;
+                    padding-left: 0;
+                    font-size: 21px;
+                    line-height: 24px;
+                }
+            }
+        }
+    }
+}
+// <!-- Footer --> 
+.ws-main--footer {
+    background-color: $primary_color;
+    position: relative;
+    .footer--image {
+        padding: 100px 0;
+        background-color: $secondary_color;
+    }
+    .footer--content {
+        padding-top: 30px;
+        .other-heading {
+            font-size: 40px;
+            line-height: 100px;
+            color: $text_white;
+        }
+        .footer--list {
+            padding-left: 25px;
+            li {
+                &::before {
+                    content: "\2022"; 
+                    color: $text_white;
+                    font-weight: bold; 
+                    display: inline-block;
+                    width: 1em; 
+                    margin-left: -1em; 
+                }
+                a {
+                    font-size: 20px;
+                    line-height: 28px;
+                    color: $text_white;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+    .scroll__to_top {
+        position: fixed;
+        right: 30px;
+        bottom: 70px;
+        opacity: 0;
+        transition: all 300ms ease;
+        .scroll__to_top-border {
+            padding: 15px;
+            border-radius: 50%;
+            background-color: $secondary_color;
+            transition: all 300ms ease;
+            &:hover {
+                background-color: $primary_color;
+                transition: all 300ms ease;
+            }
+        }
+    }
+    .show {
+        opacity: 1;
+        transition: all 300ms ease;
+    }
+}
+@media screen and (max-width: 1370px) and (min-width:992px) {
+    .ws-main--footer {
+        .footer--content {
+            padding-top: 30px;
+            .other-heading {
+                font-size: 28px;
+                line-height: 50px;
+            }
+        }
+    }
+}
+@media screen and (max-width: 480px) {
+    .ws-main--footer {
+        .footer--content {
+            .other-heading {
+                font-size: 35px;
+                line-height: 50px;
+            }
+        }
+    }
+}
+.footer-down {
+    background-color: $secondary_color;
+    .ws-description {
+        color: $text_white;
+        font-weight: 500;
+        a {
+            color: $primary_color;
+            font-weight: 500;
+            text-decoration: none;
+        }
+    }
+    a {
+        color: $text_white;
+        font-weight: 500;
+        text-decoration: none;
+    }
+}
+@media screen and (max-width: 480px) {
+    .footer-down {
+        .footer-down__inner {
+            flex-direction: column ;
+        }
+    }
+}
+//  END Home Page //
+
+// Welding Page //
+.ws-hero-section-main-welding {
+    padding-bottom: 50px;
+}
+.other-service-welding {
+    padding: 90px 0 100px 0;
+    .other-service-bg-welding {
+        background-color: #F4F4F4;
+        background-image: unset !important;
+        .can-expect-left-welding {
+            .expect-img-name {
+                .ws-description {
+                    font-size: 30px;
+                    line-height: 41px;
+                    color: #6F6F6F;
+                }
+            }
+            .other-heading {
+                font-size: 80px;
+                line-height: 100px;
+                color: $primary_color;
+                max-width: 500px;
+            }
+            .ws-description {
+                font-size: 28px;
+                line-height: 46px;
+                color: #212121;
+                max-width: 600px;
+            }
+            .expect-list {
+                li {
+                    a {
+                        font-size: 28px;
+                        line-height: 55px;
+                        color: #212121;
+                        text-decoration: none;
+                        padding-left: 15px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 991px) {
+    .other-service-welding {
+        .other-service-bg-welding {
+            padding: 50px 0 60px 0;
+            .can-expect-left-welding {
+                padding-left: 15px;
+                .other-heading {
+                    font-size: 60px;
+                    line-height: 70px;
+                }
+                .ws-description {
+                    font-size: 20px;
+                    line-height: 28px;
+                    margin: 20px 0 30px 0;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .other-service-welding{
+        .other-service-bg-welding {
+            padding: 30px 0 30px 0;
+            .can-expect-left-welding {
+                .other-heading {
+                    font-size: 40px;
+                    line-height: 50px;
+                }
+                .expect-list {
+                    li {
+                        a {
+                            font-size: 20px;
+                            line-height: 35px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 480px) {
+    .other-service-welding {
+        .other-service-bg-welding {
+            .can-expect-left-welding {
+                .expect-img-name {
+                    .ws-description {
+                        font-size: 25px;
+                    }
+                }
+                .other-heading {
+                    font-size: 33px;
+                    line-height: 40px;
+                }
+                .expect-list {
+                    li {
+                        a {
+                            font-size: 20px;
+                            line-height: 35px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+// Welding testinomal //
+.welding-testinomal {
+    padding: 60px 0;
+    .testinomal-main {
+        max-width: 900px;
+        margin: auto;
+        .ws-description {
+            font-size: 28px;
+            line-height: 46px;
+            color: #212121;
+            max-width: 857px;
+        }
+        .quate-img {
+            top: -60px;
+            left: -210px;
+            opacity: 0.31;
+        }
+        .sign-img {
+            bottom: -100px;
+            right: 0;
+        }
+    }
+}
+@media screen and (max-width: 991px) {
+    .welding-testinomal {
+        padding: 0;
+        .testinomal-main {
+            .ws-description {
+                font-size: 20px;
+                line-height: 28px;
+            }
+            .sign-img {
+                position: static !important;
+            }
+        }
+    }
+}
+// <!-- Dedicated professionals -->
+.professionals-welding {
+    padding: 100px 0 0 0;
+    .professionals-right {
+        .professionals-img-name {
+            .ws-description {
+                font-size: 30px;
+                line-height: 41px;
+                color: #6F6F6F;
+            }
+        }
+        .other-heading {
+            font-size: 80px;
+            line-height: 100px;
+            color: $primary_color;
+        }
+        .ws-description {
+            font-size: 28px;
+            line-height: 46px;
+            color: #212121;
+            margin-top: 40px;
+        }
+        .professionals-list {
+            li {
+                padding: 15px 0;
+                a {
+                    font-size: 28px;
+                    line-height: 46px;
+                    color: $text_white;
+                    text-decoration: none;
+                    background-color: $primary_color;
+                    padding: 15px 40px;
+                    border-right: 7px solid $secondary_color;
+                }
+            }
+        }
+    }
+    .professionals-down {
+        background-color: $primary_color;
+        max-width: 1588px;
+        padding: 43px 76px;
+        // margin-top: -206px;
+        // position: relative;
+        // z-index: 1;
+        // margin-left: -50px;
+        // margin-right: 50px;
+        .professionals-down-inner{
+            .ws-description {
+                font-size: 82px;
+                line-height: 100px;
+                color: $text_white;
+                &::after {
+                    content: "";
+                    display: block;
+                    width: 96px;
+                    height: 10px;
+                    background: $secondary_color;
+                }
+            }
+            .down-text {
+                font-size: 42px;
+                line-height: 54px;
+                color: $text_white;
+                max-width: 300px;
+            }
+        }
+    }
+}
+@media screen and (max-width: 991px) {
+    .professionals-welding {
+        padding: 50px 0 0 0;
+        .professionals-right {
+            .other-heading {
+                font-size: 60px;
+                line-height: 70px;
+            }
+            .ws-description {
+                font-size: 20px;
+                line-height: 28px;
+                margin-top: 20px;
+            }
+        }
+        .professionals-down {
+            .professionals-down-inner{
+                .ws-description {
+                    font-size: 60px;
+                    line-height: 70px;
+                }
+                .down-text {
+                    font-size: 30px;
+                    line-height: 42px;
+                    max-width: 100%;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 767px) {
+    .professionals-welding {
+        .professionals-right {
+            .other-heading {
+                font-size: 40px;
+                line-height: 50px;
+            }
+            .professionals-list {
+                li {
+                    padding: 10px 0;
+                    a {
+                        font-size: 20px;
+                        line-height:35px;
+                        padding: 11px 30px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 480px) {
+    .professionals-welding {
+        padding: 30px 0 0 0;
+        .professionals-right {
+            .professionals-img-name {
+                .ws-description {
+                    font-size: 18px;
+                    line-height: 31px;
+                }
+            }
+            .other-heading {
+                font-size: 33px;
+                line-height: 40px;
+            }
+        }
+        .professionals-down {
+            padding: 30px 30px;
+            .professionals-down-inner{
+                .ws-description {
+                    font-size: 40px;
+                    line-height: 50px;
+                }
+                .down-text {
+                    font-size: 28px;
+                    line-height: 42px;
+                }
+            }
+        }
+    }   
+}
+// <!-- We Inform --> 
+.we-inform-bg {
+    background-image: url("../images/CTA.png");
+    background-position: 0% 0%;
+    background-repeat: no-repeat;
+    background-clip: padding-box;
+    background-size: cover;
+    padding: 100px 0;
+    margin: 200px 0 100px;
+    .we-inform {
+        .ws-description {
+            font-size: 70px;
+            line-height: 98px;
+            color: $text_white;
+            max-width: 883px;
+        }
+        .ws-inform-button {
+            a {
+                padding: 17px 64px;
+                font-size: 22px;
+                text-decoration: none;
+                color: $text_white;
+                background-color: $primary_color;
+                box-shadow: 6px 6px 0px #FFCEC6;
+                transition: 500ms all;
+                text-transform: uppercase;
+                &:hover {
+                    box-shadow: none;
+                    transition: 500ms all;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 1200px) {
+    .we-inform-bg {
+        margin: 100px 0 50px;
+        .we-inform {
+            .ws-description {
+                font-size: 54px;
+                line-height: 70px;
+                max-width: 685px;
+            }
+        }
+    }
+}
+@media screen and (max-width: 991px) {
+    .we-inform-bg {
+        margin: 50px 0 30px;
+    }
+}
+@media screen and (max-width: 767px) {
+    .we-inform-bg {
+        padding: 50px 0;
+        margin: 30px 0 50px;
+        .we-inform {
+            .ws-description {
+                font-size: 40px;
+                line-height: 57px;
+            }
+        }
+    }
+}
+@media screen and (max-width: 480px) {
+    .we-inform-bg {
+        padding: 30px 0;
+        .we-inform {
+            .ws-description {
+                font-size: 33px;
+                line-height: 40px;
+            }
+            .ws-inform-button {
+                a {
+                    padding: 14px 20px;
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}
+// <!-- Why hire our services -->
+.why-hire {
+    padding: 100px 0;
+    .why-hire-right {
+        padding-left: 100px;
+        .other-heading {
+            font-size: 80px;
+            line-height: 100px;
+            color: $primary_color;
+            max-width: 660px;
+            margin-bottom: 45px;
+        }
+        .ws-description {
+            font-size: 28px;
+            line-height: 46px;
+            color: $primary_color;
+            max-width: 590px;
+            margin-bottom: 70px;
+        }
+        .ws-why-hire-btn {
+            a {
+                padding: 17px 64px;
+                font-size: 22px;
+                font-weight: bold;
+                @include Welding-btn;
+            }
+        }
+    }
+}
+@media screen and (max-width: 991px) {
+    .why-hire {
+        padding: 50px 0;
+        .why-hire-right {
+            padding-left: 0;
+            .other-heading {
+                font-size: 60px;
+                line-height: 70px;
+                max-width: 100%;
+                margin-bottom: 30px;
+                margin-top: 15px;
+            }
+            .ws-description {
+                font-size: 20px;
+                line-height: 28px;
+                max-width: 100%;
+                margin-bottom: 30px;
+            }
+        }
+    }
+}
+@media screen and (max-width: 767px) {
+    .why-hire {
+        padding: 30px 0;
+        .why-hire-right {
+            .other-heading {
+                font-size: 40px;
+                line-height: 50px;
+            }
+        }
+    }
+}
+@media screen and (max-width: 480px) {
+    .why-hire {
+        .why-hire-right {
+            .other-heading {
+                font-size: 33px;
+                line-height: 40px;
+                margin-bottom: 15px;
+            }
+            .ws-why-hire-btn {
+                a {
+                    padding: 14px 20px;
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+}
+//  <!-- Tools -->
+.tools {
+    padding: 50px 0 0 0;
+    .tools-inner {
+        .other-heading {
+            font-size: 45px; 
+            line-height: 61px;
+            color: $primary_color;
+            padding: 31px 0;
+            &::after {
+                content: "";
+                display: block;
+                width: 123px;
+                height: 7px;
+                background: $secondary_color;
+                position: relative;
+                top: 20px;
+            }
+        }
+        .ws-description {
+            font-size: 28px;
+            line-height: 46px;
+            color: #212121;
+            max-width: 388px;
+        }
+    }
+}
+.can-expect-welding {
+    padding: 200px 0 100px 0;
+}
+@media screen and (max-width: 991px) {
+    .tools {
+        padding: 50px 0 0 0;
+        .tools-inner {
+            .ws-description {
+                max-width: 100%;
+            }
+        }
+    }
+}
+@media screen and (max-width: 767px) {
+    .tools {
+        padding: 0;
+        .tools-inner {
+            .other-heading {
+                font-size: 40px; 
+                line-height: 50px;
+                padding: 15px 0;
+                &::after {
+                    top: 10px;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 480px) {
+    .tools {
+        .tools-inner {
+            .other-heading {
+                font-size: 33px; 
+                line-height: 40px;
+            }
+            .ws-description {
+                font-size: 20px;
+                line-height: 28px;
+            }
+        }
+    }
+}
+// END Welding Page //
+
+// US Page //
+@media screen and (min-width: 992px) {
+    .ws-hero-section-main-us {
+        padding: 94px 0 200px 0;
+        .hero-heading{
+            max-width: 100% !important;
+        }
+    }
+}
+.ws-hero-section-main-us {
+    .hero-heading{
+        max-width: 100% !important;
+    }
+}
+// Help Business US
+.help-business-us {
+    .help-business-content {
+        .other-heading {
+            margin-bottom: 180px;
+        }
+        .help-business-btn-us {
+            a {
+                padding: 13px 64px;
+                font-size: 27px;
+                border: 6px solid $secondary_color;
+                text-decoration: none;
+                color: $secondary_color;
+                transition: 500ms all;
+                text-transform: uppercase;
+                font-weight: bold;
+                &:hover {
+                    background-color: $secondary_color;
+                    color: $text_white;
+                    transition: 500ms all;
+                }
+            }
+        }
+    }
+    .business-right-box {
+        .help-box-one {
+            background-color: $primary_color;
+            margin-bottom: 25px;
+            background-image: url('../images/IMG\ Proriedades\ 01.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+        }
+    }
+}
+@media screen and (max-width: 991px) {
+    .help-business-us {
+        .help-business-content {
+            .other-heading {
+                margin-bottom: 30px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .help-business-us {
+        .help-business-content {
+            .help-business-btn-us {
+                a {
+                    padding: 10px 20px;
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}   
+// <!-- Professionals -->
+.professionals-welding-us {
+    padding: 0;
+}
+
+// <!-- Process and jobs -->
+.process-jobs {
+    padding: 170px 0 100px 0;
+    .process-jobs-right {
+        .other-heading {
+            font-size: 75px;
+            line-height: 103px;
+            color: $primary_color;
+            margin-bottom: 32px;
+        }
+        .ws-description {
+            font-size: 35px;
+            line-height: 48px;
+            color: $primary_color;
+            margin-bottom: 30px;
+        }
+        .process-list {
+            li {
+                list-style-type: none;
+                a {
+                    font-size: 30px;
+                    line-height: 55px;
+                    color: $primary_color;
+                    text-decoration: none;
+                    display: inline-block;
+                    &::after {
+                        content: "";
+                        display: block;
+                        width: 100%;
+                        height: 3px;
+                        background: $secondary_color;
+                        position: relative;
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 991px) {
+    .process-jobs {
+        padding: 50px 0;
+        .process-jobs-right {
+            padding-left: 15px;
+            .other-heading {
+                font-size: 60px;
+                line-height: 70px;
+            }
+            .ws-description {
+                font-size: 25px;
+                line-height: 35px;
+            }
+        }
+    }
+}
+@media screen and (max-width: 767px) {
+    .process-jobs {
+        padding: 30px 0;
+        .process-jobs-right {
+            padding-left: 15px;
+            .other-heading {
+                font-size: 40px;
+                line-height: 50px;
+            }
+            .ws-description {
+                font-size: 20px;
+                line-height: 30px;
+            }
+            .process-list {
+                li {
+                    a {
+                        font-size: 25px;
+                        line-height: 45px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 480px) {
+    .process-jobs {
+        padding: 30px 0;
+        .process-jobs-right {
+            padding-left: 15px;
+            .other-heading {
+                font-size: 33px;
+                line-height: 40px;
+            }
+            .process-list {
+                li {
+                    a {
+                        font-size: 25px;
+                        line-height: 45px;
+                    }
+                }
+            }
+        }
+    }
+}
+// <!-- You may also like -->
+.also-like {
+    padding: 250px 0 100px 0;
+    .also-like-main {
+        .also-like-up{
+            .also-like-img-text {
+                .ws-description {
+                    font-size: 28px;
+                    line-height: 46px;
+                    color: #212121;
+                }
+            }
+            .other-heading {
+                font-size: 62px;
+                line-height: 78px;
+                color: $primary_color;
+                margin: 20px 0 60px 0;
+            }
+            .ws-description {
+                font-size: 28px;
+                line-height: 41px;
+                color: #6F6F6F;
+                max-width: 637px;
+            }
+        }
+        .also-like-down {
+            padding: 130px 0 0 0;
+            .also-like-down-inner {
+                flex-basis: 20%;
+                .also-like-down-inner-content {
+                    margin: 0 18px;
+                    padding: 50px 10px 25px 50px;
+                    background-color: #F1F1F1;
+                    &:hover .overlay-main {
+                        height: 100%;
+                      }
+                    .other-heading {
+                        font-size: 34px;
+                        line-height: 40px;
+                        color: $primary_color;
+                        margin: 30px 0 60px 0;
+                        max-width: 200px;
+                    }
+                    .ws-description {
+                        font-size: 18px;
+                        line-height: 26px;
+                        color: #6F6F6F;
+                        max-width: 190px;
+                    }
+                    .box-inner-down {
+                        font-size: 18px;
+                        line-height: 26px;
+                        a {
+                            text-decoration: none;
+                            color:  #212121;
+                        }
+                    }
+                    .overlay-main {
+                        .also-like-down-inner-content-overlay {
+                            padding: 50px 10px 25px 50px;
+                        }
+                        background-color: $secondary_color;
+                        left: 0;
+                        bottom: 0;
+                        right: 0;
+                        height: 0;
+                        transition: .5s ease;
+                        overflow: hidden;
+                        .other-heading {
+                            font-size: 32px;
+                            line-height: 40px;
+                            color: $text_white;
+                            margin: 10px 0 30px 0;
+                            max-width: 200px;
+                        }
+                        .ws-description {
+                            font-size: 18px;
+                            line-height: 26px;
+                            color: $text_white;
+                            max-width: 190px;
+                        }
+                        .overlay-number {
+                            font-size: 40px;
+                            line-height: 66px;
+                            color: $primary_color;
+                            text-decoration: none;
+                        }
+                        .box-inner-down {
+                            font-size: 18px;
+                            line-height: 26px;
+                            a {
+                                text-decoration: none;
+                                color:  $text_white;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (min-width: 992px) {
+    .can-expect-us {
+        padding-top: 100px;
+    }
+}
+@media screen and (min-width: 768px) {
+    .also-like {
+        padding: 250px 0 100px 0;
+        .also-like-main {
+            .also-like-down {
+                .also-like-down-inner {
+                    .also-like-down-inner-content {
+                        .other-heading {
+                            min-height: 120px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 1400px) {
+    .also-like {
+        padding: 100px 0 100px 0;
+        .also-like-main {
+            .also-like-down {
+                flex-wrap: wrap;
+                padding: 100px 0 0 0;
+                .also-like-down-inner {
+                    flex-basis: 33.33%;
+                    .also-like-down-inner-content {
+                        margin: 15px;
+                        padding: 20px 10px 20px 20px;
+                        .overlay-main {
+                            .also-like-down-inner-content-overlay {
+                                padding: 20px 10px 20px 20px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 991px) {
+    .also-like {
+        padding: 50px 0 0;
+        .also-like-main {
+            .also-like-up{
+                .other-heading {
+                    margin: 20px 0 20px 0;
+                }
+            }
+            .also-like-down {
+                padding: 50px 0 0;
+                .also-like-down-inner {
+                    flex-basis: 50%;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 767px) {
+    .also-like {
+        padding: 50px 0 0;
+        .also-like-main {
+            .also-like-up{
+                .also-like-img-text {
+                    .ws-description {
+                        font-size: 28px;
+                        line-height: 46px;
+                    }
+                }
+                .other-heading {
+                    font-size: 40px;
+                    line-height: 50px;
+                    margin: 10px 0;
+                }
+                .ws-description {
+                    font-size: 20px;
+                    line-height: 28px;
+                }
+            }
+            .also-like-down {
+                padding: 50px 0 0;
+                .also-like-down-inner {
+                    flex-basis: 100%;
+                    .also-like-down-inner-content {
+                        .other-heading {
+                            max-width: 100%;
+                        }
+                        .ws-description {
+                            max-width: 100%;
+                        }
+                        .overlay-main {
+                            .also-like-down-inner-content-overlay {
+                            }
+                            .other-heading {
+                                max-width: 100%;
+                            }
+                            .ws-description {
+                                max-width: 100%;
+                            }
+                            .overlay-number {
+                                font-size: 30px;
+                                line-height: 56px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 480px) {
+    .also-like {
+        padding: 30px 0 0;
+        .also-like-main {
+            .also-like-up{
+                .other-heading {
+                    font-size: 33px;
+                    line-height: 40px;
+                }
+            }
+            .also-like-down {
+                padding: 30px 0 0;
+            }
+        }
+    }
+}
+
+// Contact Page
+@media screen and (min-width: 992px) {
+    .ws-hero-section-main-contact {
+        padding-bottom: 50px;
+        .ws-header {
+            padding-bottom: 100px;
+        }
+    }
+}
+.ws-hero-section-main-contact {
+    .ws-hero-section-down {
+        .hero-heading {
+
+        }
+    }
+}
+// Production Process 
+.production--process-contact {
+    background-image: unset;
+    background-color: $secondary_color;
+    .production--process-contact__inner{
+        max-width: 1000px;
+        .production--process__left {
+            .other-heding {
+                max-width: 100%;
+            }
+            .ws-description {
+                max-width: 100%;
+            }
+        }
+        .production--process__right--form {
+            .form-control {
+                padding: 15px;
+            }
+            .form-select {
+                padding: 15px;
+                color: #6F6F6F;
+            }
+        }
+    }
+}
+// END Contact Page
+// Blog Page
+.experience-quality-blog {
+    padding-top: 100px;
+}
+@media screen and (max-width: 991px) {
+    .experience-quality-blog {
+        padding-top: 50px;
+        .padd-right-zero {
+            padding-right: 0 !important;
+        }
+    }
+}
+@media screen and (max-width: 767px) {
+    .experience-quality-blog {
+        padding-top: 20px;
+    }
+}
+// END Blog Page
+
+// Blog Single page
+// <!-- Blog Single Content -->
+.ws-hero-section-main-single {
+    padding-top: 10px;
+    background-image: unset;
+    background-color: $primary_color;
+    .ws-header {
+        padding-bottom: 20px;
+    }
+}
+// Blog Single Content
+.ws-blog-single {
+    a {
+        color: $secondary_color;
+        text-decoration: none;
+    }
+    .ws-blog-single-content {
+        background-color: #F4F4F4;
+        padding: 20px;
+        margin-top: -100px;
+        .main-heading {
+            font-size: 79px;
+            line-height: 100px;
+            color: $primary_color;
+            margin-bottom: 20px;
+        }
+        .ws-last-updated {
+            color: $secondary_color;
+            text-decoration: none;
+        }
+        .ws-description {
+            font-size: 25px;
+            line-height: 30px;
+            color: #212121;
+        }
+        .other-heading {
+            font-size: 35px;
+            line-height: 55px;
+            color: $primary_color;
+            padding-left: 20px;
+            border-left: 5px solid $primary_color;
+        }
+        .blog-content-list {
+            li {
+                font-size: 25px;
+                line-height: 30px;
+                color: #212121;
+                a {
+                    font-size: 25px;
+                    line-height: 30px;
+                    color: $secondary_color;
+                    text-decoration: none;
+                }
+            }
+        }
+        .ws-blog-categoty {
+            .cat-title {
+                font-size: 22px;
+                line-height: 30px;
+            }
+            .ws-cat-list {
+                li {
+                    list-style-type: none;
+                    a {
+                        font-size: 20px;
+                        line-height: 28px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 991px) {
+    .ws-blog-single {
+        .ws-blog-single-content {
+            margin-top: 0;
+        }
+    }
+}
+@media screen and (max-width: 767px) {
+    .ws-blog-single {
+        .ws-blog-single-content {
+            .main-heading {
+                font-size: 47px;
+                line-height: 60px;
+                margin-bottom: 10px;
+            }
+            .other-heading {
+                font-size: 28px;
+                line-height: 35px;
+                padding-left: 10px;
+            }
+            .ws-description {
+                font-size: 20px;
+                line-height: 26px;
+            }
+            .blog-content-list {
+                li {
+                    font-size: 20px;
+                    line-height: 26px;
+                    a {
+                        font-size: 20px;
+                        line-height: 26px;
+                    }
+                }
+            }
+            .ws-blog-categoty {
+                .cat-title {
+                    font-size: 20px;
+                    line-height: 26px;
+                }
+                .ws-cat-list {
+                    li {
+                        list-style-type: none;
+                        a {
+                            font-size: 17px;
+                            line-height: 23px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 480px) {
+    .ws-blog-single {
+        .ws-blog-single-content {
+            .main-heading {
+                font-size: 29px;
+                line-height: 40px;
+            }
+            .last-update {
+                margin-bottom: 15px !important;
+                font-size: 16px;
+            }
+            .other-heading {
+                font-size: 22px;
+                line-height: 25px;
+            }
+            .ws-description {
+                font-size: 16px;
+                line-height: 23px;
+            }
+            .blog-content-list {
+                padding-left: 15px;
+                li {
+                    font-size: 16px;
+                    line-height: 23px;
+                    a {
+                        font-size: 16px;
+                        line-height: 23px;
+                    }
+                }
+            }
+            .ws-blog-categoty {
+                margin-top: 15px !important;
+                .cat-title {
+                    font-size: 17px;
+                    line-height: 22px;
+                }
+                .ws-cat-list {
+                    li {
+                        list-style-type: none;
+                        a {
+                            font-size: 14px;
+                            line-height: 20px;
+                            margin-left: 0 !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+// Blog Right Sidebar
+.blog__content {
+    padding: 130px 0 90px;
+    .blog__content_inner-main {
+        .ws__blog_left {
+            margin-bottom: 40px;
+            .ws__blog_inner-box-up {
+                transition: .5s all;
+                .date {
+                    background-color: $secondary_color;
+                    right: 0;
+                    bottom: 0;
+                    font-size: 12px;
+                    font-weight: 700;
+                    color: $text_white;
+                    text-transform: uppercase;
+                    padding: 5px 20px;
+                }
+            }
+            .content {
+                position: relative;
+                background-color: $text_white;
+                padding: 30px 0 10px;
+                .post__meta {
+                    position: relative;
+                    margin-bottom: 10px;
+                    a {
+                        position: relative;
+                        font-size: 14px;
+                        font-weight: 500;
+                        color: $secondary_color;
+                        margin-right: 10px;
+                        transition: .5s;
+                    }
+                }
+                .ws__post_title {
+                    position: relative;
+                    font-size: 34px;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                    margin-bottom: 20px;
+                    a {
+                        color: $primary_color;
+                        transition: .5s;
+                    }
+                }
+                .text {
+                    position: relative;
+                    margin-bottom: 0;
+                    font-size: 18px;
+                    font-weight: 500;
+                }
+            }
+        }
+        .ws__pagination {
+            position: relative;
+            margin-bottom: 30px;
+            padding: 0;
+            li {
+                position: relative;
+                display: inline-block;
+                margin: 0px 6px 0px 0px;
+                a {
+                    position: relative;
+                    display: inline-block;
+                    line-height: 78px;
+                    width: 78px;
+                    height: 78px;
+                    font-size: 18px;
+                    color: $primary_color;
+                    font-weight: 700;
+                    text-align: center;
+                    background: #f9f8f7;
+                    text-transform: capitalize;
+                    transition: all 500ms ease;
+                    -webkit-transition: all 500ms ease;
+                    border-radius: 50%;
+                    &:hover {
+                        background-color: $secondary_color;
+                        color: $text_white;
+                        svg {
+                            fill: $text_white;
+                        }
+                    }
+                }
+                .active {
+                    background-color: $secondary_color;
+                    color: $text_white;
+                    svg {
+                        fill: $text_white;
+                    }
+                }
+            }
+        }
+        .ws__blog_right {
+            .widget {
+                margin-bottom: 50px;
+            }
+            .search__box {
+                background-color: $secondary_color;
+                padding: 25px;
+                .form-group {
+                    position: relative;
+                    input {
+                        position: relative;
+                        line-height: 30px;
+                        padding: 10px 50px 10px 20px;
+                        display: block;
+                        font-size: 16px;
+                        width: 100%;
+                        height: 70px;
+                        color: #797672;
+                        font-weight: 600;
+                        transition: all 500ms ease;
+                        border: 0;
+                        outline: none;
+                    }
+                    button {
+                        position: absolute;
+                        right: 0px;
+                        top: 0px;
+                        height: 70px;
+                        width: 70px;
+                        display: block;
+                        font-size: 26px;
+                        line-height: 100%;
+                        font-weight: normal;
+                        background: none;
+                        border: 0;
+                        outline: none;
+                    }
+                }
+            }
+            .ws__recent_post {
+                padding: 50px;
+                background: #f9f8f7;
+                .widget_title {
+                    position: relative;
+                    font-size: 18px;
+                    font-weight: 700;
+                    display: inline-block;
+                    padding: 5.5px 17px;
+                    color: $secondary_color;
+                    text-transform: capitalize;
+                    border: 3px solid $secondary_color;
+                    margin-bottom: 30px;
+                }
+                .post {
+                    &:last-child {
+                        margin-bottom: 0px;
+                        border-bottom: 0;
+                        padding-bottom: 0;
+                    }
+                    position: relative;
+                    font-size: 14px;
+                    color: #666666;
+                    padding: 0 0 18px;
+                    padding-left: 90px;
+                    min-height: 85px;
+                    margin-bottom: 30px;
+                    border-bottom: 1px solid #e1e1e1;
+                    .post__thumbnail {
+                        position: absolute;
+                        left: 0px;
+                        top: 4px;
+                        width: 70px;
+                    }
+                    .comment {
+                        font-size: 12px;
+                        font-weight: 700;
+                        text-transform: uppercase;
+                        color: $secondary_color;
+                    }
+                    .text {
+                        position: relative;
+                        margin-top: -4px;
+                        font-size: 16px;
+                        margin: 0px 0px 0px;
+                        font-weight: 700;
+                        a {
+                            color: $primary_color;
+                            display: inline-block;
+                            line-height: 26px;
+                            text-transform: uppercase;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (min-width: 992px) {
+    .left__sidebar {
+        .inner__left {
+            order: 2;
+        }
+    }
+}
+@media screen and (max-width: 480px) {
+    .blog__content {
+        padding: 50px 0;
+        .blog__content_inner-main {
+            .ws__blog_left {
+                margin-bottom: 30px;
+                .content {
+                    padding: 20px 0 10px;
+                    .ws__post_title {
+                        font-size: 26px;
+                    }
+                }
+            }
+            .ws__pagination {
+                li {
+                    a {
+                        line-height: 45px;
+                        width: 45px;
+                        height: 45px;
+                    }
+                }
+            }
+            .ws__blog_right {
+                .widget {
+                    margin-bottom: 30px;
+                }
+                .search__box {
+                    padding: 15px;
+                }
+                .ws__recent_post {
+                    padding: 25px;
+                }
+            }
+        }
+    }
+}
+// Welding Services
+.ws-services {
+    padding: 130px 0 90px;
+    .ws-services__inner-main {
+        .ws-services__left {
+            img {
+                margin-bottom: 30px;
+            }
+            .title {
+                font-size: 34px;
+                font-weight: 900;
+                text-transform: uppercase;
+                margin-bottom: 30px;
+                a {
+                    color: $primary_color;
+                }
+            }
+            .text {
+                font-size: 16px;
+                line-height: 26px;
+                font-weight: 400;
+                color: #212121;
+                margin: 0px 0px 15px;
+                line-height: 32px;
+                font-weight: 500;
+            }
+        }
+        .accordion {
+            border: 1px solid $primary_color;
+            margin-bottom: 30px;
+        }
+        .accordion-button:focus {
+            border-color: 0;
+            box-shadow: none;
+        }
+        .accordion-button:not(.collapsed) {
+            color: $secondary_color;
+            background-color: transparent;
+        }
+        .accordion-button:not(.collapsed)::after {
+            fill: $secondary_color;
+            filter: $secondary_color;
+        }
+        .ws-services__right {
+            .ws-services__menu {
+                margin-bottom: 30px;
+                ul {
+                    padding: 0;
+                    li {
+                        margin-bottom: 2px;
+                        a {
+                            background: #f9f8f7;
+                            color: $primary_color;
+                            display: block;
+                            padding: 26.5px 40px;
+                            font-size: 19px;
+                            font-weight: 700;
+                            text-transform: uppercase;
+                            transition: .5s;
+                            &:hover {
+                                background: $secondary_color;
+                                color: $text_white;
+                            }
+                        }
+                    }
+                    .active {
+                        a {
+                            background: $secondary_color;
+                            color: $text_white
+                        }
+                    }
+                }
+            }
+            .ws-contact {
+                background: $secondary_color;
+                position: relative;
+                text-align: center;
+                padding-top: 60px;
+                margin-bottom: 50px;
+                .ws-icon {
+                    width: 125px;
+                    height: 125px;
+                    line-height: 125px;
+                    margin: 0 auto 30px;
+                    background: #181614;
+                    font-size: 60px;
+                    border-radius: 50%;
+                    svg {
+
+                    }
+                }
+                .text {
+                    font-size: 30px;
+                    font-weight: 900;
+                    color: #fff;
+                    text-transform: uppercase;
+                    line-height: 40px;
+                    max-width: 250px;
+                    margin: 0 auto 50px;
+                }
+                .phone {
+                    position: relative;
+                    background: #181614;
+                    font-size: 30px;
+                    font-weight: 500;
+                    padding: 30px 0;
+                    a {
+                        color: #fff;
+                        transition: .5s;
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 480px) {
+    .ws-services {
+        padding: 50px 0;
+        .ws-services__inner-main {
+            .ws-services__left {
+                .title {
+                    font-size: 30px;
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+}
+
+
+// Page Loader
+$dark-grey: #393E46;
+$orange: #D65A31;
+
+@keyframes rotate{
+  from{ transform: translate(-50%, -50%) rotate(0); }
+  to{ transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+.preloader {
+  height: 100vh;
+  width: 100vw;
+  background: $dark-grey;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  
+  &__wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 200px;
+  }
+
+  &__circle {
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    z-index: 99;
+    position: relative;
+    transition: .3s ease;
+    
+    &-line {
+      animation: rotate 3.5s ease-in-out infinite;
+      border-top: 1px solid transparent;
+      border-left: 1px solid $orange;
+      border-right: 1px solid $orange;
+      border-bottom: 1px solid transparent;
+      border-radius: 50%;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+
+      @for $i from 1 through 10 {
+        &--#{$i} {
+          width: 200px - $i * 20;
+          height: 200px - $i * 20;
+          animation-duration: 1s * $i;
+        }
+      }
+    }
+  }
+}

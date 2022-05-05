@@ -1,0 +1,39 @@
+@font-face {
+    font-family: 'Open Sans';
+    src: url('OpenSans-Regular.eot');
+    src: url('OpenSans-Regular.eot?#iefix') format('embedded-opentype'),
+        url('OpenSans-Regular.woff2') format('woff2'),
+        url('OpenSans-Regular.woff') format('woff'),
+        url('OpenSans-Regular.ttf') format('truetype'),
+        url('OpenSans-Regular.svg#OpenSans-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('OpenSans-Light.eot');
+    src: url('OpenSans-Light.eot?#iefix') format('embedded-opentype'),
+        url('OpenSans-Light.woff2') format('woff2'),
+        url('OpenSans-Light.woff') format('woff'),
+        url('OpenSans-Light.ttf') format('truetype'),
+        url('OpenSans-Light.svg#OpenSans-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Exo';
+    src: url('Exo-Bold.eot');
+    src: url('Exo-Bold.eot?#iefix') format('embedded-opentype'),
+        url('Exo-Bold.woff2') format('woff2'),
+        url('Exo-Bold.woff') format('woff'),
+        url('Exo-Bold.ttf') format('truetype'),
+        url('Exo-Bold.svg#Exo-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
