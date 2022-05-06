@@ -55,8 +55,9 @@ jQuery(document).ready(function ($) {
 
     /** Page Loader */
     $(window).on('load', function () {
-        $('#ws-loading').css("display", "none");
-        $('.preloader').css("display", "none");
+        // $('#ws-loading').css("display", "none");
+        // $('.preloader').css("display", "none");
+        $('.preloader').fadeOut();
     });
 
     /** Counter */

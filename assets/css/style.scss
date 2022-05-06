@@ -99,14 +99,6 @@ ol li {
                 padding: 0 25px;
                 transition: all .5s;
                 position: relative;
-                &:hover>a::after {
-                    // content: "";
-                    // display: block;
-                    // width: 60px;
-                    // height: 7px;
-                    // background: $secondary_color;
-                    // transition: all .5s;
-                }
                 &:hover>a {
                     color: $secondary_color !important;
                     transition: all .5s;
@@ -115,13 +107,6 @@ ol li {
                     text-decoration: none;
                     font-size: 30px;
                     color: $text_white !important;
-                    &::after {
-                        // content: "";
-                        // display: block;
-                        // width: 60px;
-                        // height: 7px;
-                        // background: transparent;
-                    }
                 }
                 .dropdown-menu {
                     background-color: $primary_color;
@@ -165,6 +150,31 @@ ol li {
                 @include Welding-btn;
                 padding: 17px 64px;
                 font-size: 22px;
+            }
+        }
+    }
+}
+@media screen and (min-width: 992px) and (max-width: 1080px) {
+    .ws-hero-section-main {
+        .ws-hero-inner-main{
+            ul {
+                li {
+                    padding: 0 13px;
+                }
+            }
+        }
+    }
+}
+@media screen and (min-width: 992px) {
+    .ws-hero-inner-main {
+        ul {
+            li {
+                &:hover {
+                    .dropdown-menu {
+                        display: block;
+                        animation: fadeIn 0.3s alternate;
+                    }
+                }
             }
         }
     }
@@ -330,6 +340,9 @@ ol li {
     }
 }
 @media screen and (max-width: 480px) {
+    .sticky {
+        padding: 0 !important;
+    }
     .ws-hero-section-main {
         padding: 20px 0 30px 0;
         .ws-header {
@@ -2558,8 +2571,8 @@ ol li {
     }
     .ws-blog-single-content {
         background-color: #F4F4F4;
-        padding: 20px;
-        margin-top: -100px;
+        padding: 30px 30px 50px;
+        margin: 100px 0 50px;
         .main-heading {
             font-size: 79px;
             line-height: 100px;
@@ -2610,12 +2623,85 @@ ol li {
                 }
             }
         }
+        .blog_share_single {
+            .blog_share_title {
+                h6 {
+                    font-size: 22px;
+                    line-height: 30px;
+                }
+            }
+            .blog_share_icon {
+                li {
+                    a {
+                        margin-left: 15px;
+                    }
+                }
+            }
+        }
+    }
+    .single__author_box {
+        padding: 60px;
+        background-color: #F4F4F4;
+        .author__img {
+            img {
+                border-radius: 50%;
+            }
+        }
+        .author__meta {
+            .author__title {
+                font-size: 24px;
+            }
+            .author__desc {
+                max-width: 530px;
+
+            }
+        }
+    }
+    .single-comment-form {
+        .group-title {
+            h3 {
+                font-size: 30px;
+                font-weight: 900;
+                margin-bottom: 35px;
+                text-transform: uppercase;
+            }
+        }
+        .comment-form {
+            .form-group {
+                padding: 0 10px;
+                margin-bottom: 20px;
+                .input-text {
+                    position: relative;
+                    display: block;
+                    width: 100%;
+                    line-height: 28px;
+                    padding: 15px 20px;
+                    color: $primary_color;
+                    font-size: 18px;
+                    background: #f9f8f7;
+                    border: 1px solid transparent;
+                    border-radius: 0;
+                    transition: all 300ms ease;
+                    &:focus {
+                        outline: none;
+                        border: 0;
+                        box-shadow: none;
+                    }
+                }
+                .form-btn {
+                    @include Welding-btn;
+                    padding: 17px 64px;
+                    font-size: 22px; 
+                }
+            }
+        }
+
     }
 }
 @media screen and (max-width: 991px) {
     .ws-blog-single {
         .ws-blog-single-content {
-            margin-top: 0;
+            margin-top: 50px;
         }
     }
 }
@@ -2711,12 +2797,34 @@ ol li {
                     }
                 }
             }
+            .blog_share_single {
+                .blog_share_title {
+                    h6 {
+                        font-size: 17px;
+                        line-height: 22px;
+                    }
+                }
+            }
+        }
+        .single__author_box {
+            padding: 20px;
+        }
+        .single-comment-form {
+            .comment-form {
+                .form-group {
+                    .form-btn {
+                        padding: 15px;
+                        font-size: 18px; 
+                    }
+                }
+            }
+    
         }
     }
 }
 // Blog Right Sidebar
 .blog__content {
-    padding: 130px 0 90px;
+    padding: 100px 0 90px;
     .blog__content_inner-main {
         .ws__blog_left {
             margin-bottom: 40px;
