@@ -133,6 +133,10 @@ ol li {
   padding: 0.25rem 0;
 }
 
+.header-main .ws-header .ws-hero-inner-main ul li .dropdown-menu li .dropdown-item::before {
+  content: unset;
+}
+
 .header-main .ws-header .ws-hero-inner-main ul li .dropdown-menu li .dropdown-item:hover {
   background: transparent;
 }
@@ -381,6 +385,9 @@ ol li {
   .header-main .ws-nav-menu {
     padding-bottom: 40px;
   }
+  .header-main .ws-nav-menu .dropdown-menu {
+    text-align: center;
+  }
   .ws-hero-section-main {
     padding: 175px 0 100px 0;
   }
@@ -400,6 +407,10 @@ ol li {
 }
 
 @media screen and (max-width: 576px) {
+  .header-main .ws-header .ws-hero-inner-main .navbar-brand img {
+    width: 80px;
+    height: 60px;
+  }
   .header-main .ws-header .ws-hero-inner-main ul {
     margin: 0;
   }
