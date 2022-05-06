@@ -53,85 +53,6 @@ ol li {
         }
     }
 }
-
-// Header
-.header-main {
-    position: fixed;
-    top: 40px;
-    right: 0;
-    z-index: 3;
-    left: 0;
-    width: 100%;
-    .ws-header {
-        padding-bottom: 0;
-        position: relative;
-        z-index: 3;
-        .ws-hero-inner-main {
-            .ws-nav-menu {
-                max-width: 1000px;
-            }
-            ul {
-                margin: 0;
-                li{
-                    list-style-type: none;
-                    padding: 0 25px;
-                    transition: all .5s;
-                    position: relative;
-                    &:hover>a {
-                        color: $secondary_color !important;
-                        transition: all .5s;
-                    }
-                    &:hover>a::before {
-                        content: "";
-                        display: block;
-                        width: 60px;
-                        height: 7px;
-                        background: $secondary_color;
-                        transition: all .5s;
-                    }
-                    a {
-                        text-decoration: none;
-                        font-size: 30px;
-                        color: $text_white !important;
-                        &::after {
-                            position: absolute;
-                            right: 0;
-                        }
-                        &::before {
-                            content: "";
-                            display: block;
-                            width: 60px;
-                            height: 7px;
-                            background: transparent;
-                        }
-                    }
-                    .dropdown-menu {
-                        background-color: $primary_color;
-                        padding: 20px 15px;
-                        li {
-                            padding: 0;
-                            .dropdown-item {
-                                font-size: 20px;
-                                padding: 0.25rem 0;
-                                &:hover {
-                                    background: transparent
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-            .ws-hero-button {
-                a {
-                    @include Welding-btn;
-                    padding: 17px 64px;
-                    font-size: 22px;    
-                }
-            }
-        }
-    }
-}
-
 // Header & Hero Section
 .ws-hero-section-main {
     // background-image: url("../images/BG\ Header\ INICIO.png");
@@ -140,7 +61,7 @@ ol li {
     background-repeat: no-repeat;
     background-clip: padding-box;
     background-size: cover;
-    padding: 250px 0 300px 0;
+    padding: 94px 0 300px 0;
     .hero__overlay {
         top: 0;
         right: 0;
@@ -149,11 +70,57 @@ ol li {
         background-color: #042A3D;
         opacity: 0.9;
     }
+    .ws-header {
+        padding-bottom: 168px;
+        position: relative;
+        z-index: 3;
+    }
     .ws-hero-section-down {
         position: relative;
         z-index: 1;
     }
-    
+    .ws-hero-inner-main {
+        .ws-nav-menu {
+            max-width: 1000px;
+        }
+        ul {
+            margin: 0;
+            li{
+                list-style-type: none;
+                padding: 0 25px;
+                transition: all .5s;
+                position: relative;
+                &:hover>a {
+                    color: $secondary_color !important;
+                    transition: all .5s;
+                }
+                a {
+                    text-decoration: none;
+                    font-size: 30px;
+                    color: $text_white !important;
+                }
+                .dropdown-menu {
+                    background-color: $primary_color;
+                    li {
+                        padding: 0;
+                        .dropdown-item {
+                            font-size: 20px;
+                            &:hover {
+                                background: transparent
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .ws-hero-button {
+            a {
+                @include Welding-btn;
+                padding: 17px 64px;
+                font-size: 22px;    
+            }
+        }
+    }
     .ws-hero-section-down {
         .hero-heading {
             font-size: $page_heading;
@@ -191,15 +158,12 @@ ol li {
     animation: slide-in 500ms ease-out;
     transition: all .5s ease;
 }
-@media screen and (min-width: 992px) and (max-width: 1130px) {
-    .header-main {
-        .ws-header {
-            .ws-hero-inner-main {
-                ul {
-                    margin: 0;
-                    li{
-                        padding: 0 8px;
-                    }
+@media screen and (min-width: 992px) and (max-width: 1080px) {
+    .ws-hero-section-main {
+        .ws-hero-inner-main{
+            ul {
+                li {
+                    padding: 0 13px;
                 }
             }
         }
@@ -308,15 +272,8 @@ ol li {
 }
 // Header & Hero Section END Media
 @media screen and (max-width: 991px) {
-    .header-main {
-        background-color: $primary_color;
-        top: 0;
-        .ws-nav-menu {
-            padding-bottom: 40px;
-        }
-    }
     .ws-hero-section-main {
-        padding: 175px 0 100px 0;
+        padding: 30px 0 100px 0;
         .ws-header {
             padding-bottom: 50px;
         }
@@ -336,34 +293,8 @@ ol li {
 }
 
 @media screen and (max-width: 576px) {
-    .header-main {
-        .ws-header {
-            .ws-hero-inner-main {
-                ul {
-                    margin: 0;
-                    li{
-                        a {
-                            font-size: 22px;
-                            line-height: normal;
-                        }
-                    }
-                }
-                .ws-hero-button {
-                    a {
-                        @include Welding-btn;
-                        padding: 15px;
-                        font-size: 20px;    
-                    }
-                }
-                .ws-nav-menu {
-                    padding-bottom: 20px;
-                }
-            }
-        }
-    }
-
     .ws-hero-section-main {
-        padding: 130px 0 50px 0;
+        padding: 20px 0 50px 0;
         .ws-header {
             padding-bottom: 20px;
         }
@@ -417,7 +348,9 @@ ol li {
         padding: 0 !important;
     }
     .ws-hero-section-main {
-        padding: 120px 0 40px 0;
+        padding: 20px 0 30px 0;
+        .ws-header {
+        }
         .ws-hero-section-down {
             .hero-heading {
                 font-size: 33px;
@@ -2182,6 +2115,7 @@ ol li {
 // US Page //
 @media screen and (min-width: 992px) {
     .ws-hero-section-main-us {
+        padding: 94px 0 200px 0;
         .hero-heading{
             max-width: 100% !important;
         }

@@ -55,30 +55,53 @@ jQuery(document).ready(function ($) {
 
     /** Page Loader */
     $(window).on('load', function () {
-        // $('#ws-loading').css("display", "none");
-        // $('.preloader').css("display", "none");
         $('.preloader').fadeOut();
     });
 
-    /** Counter */
-    $('.counter').each(function () {
-        var $this = $(this),
-            countTo = $this.attr('data-count');
+    /** Counter Start if Show .counter class */
+    var $animation_elements_ca = $('.counter');
+    var $window = $(window);
+    if ($($animation_elements_ca).length) {
+        function check_if_in_view() {
+            var window_height = $window.height();
+            var window_top_position = $window.scrollTop();
+            var window_bottom_position = (window_top_position + window_height);
 
-        $({ countNum: $this.text() }).animate({
-            countNum: countTo
-        },
-        {
-            duration: 2000,
-            easing: 'linear',
-            step: function () {
-                $this.text(Math.floor(this.countNum));
-            },
-            complete: function () {
-                $this.text(this.countNum);
-            }
-        });
-    });
+            $.each($animation_elements_ca, function () {
+                var $element = $(this);
+                var element_height = $element.outerHeight();
+                var element_top_position = $element.offset().top;
+                var element_bottom_position = (element_top_position + element_height);
+
+                //check to see if this current container is within viewport
+                if ((element_bottom_position >= window_top_position) &&
+                    (element_top_position <= window_bottom_position)) {
+                     /** Counter */
+                    $('.counter').each(function () {
+                        var $this = $(this),
+                            countTo = $this.attr('data-count');
+
+                        $({ countNum: $this.text() }).animate({
+                            countNum: countTo
+                        },
+                        {
+                            duration: 2000,
+                            easing: 'linear',
+                            step: function () {
+                                $this.text(Math.floor(this.countNum));
+                            },
+                            complete: function () {
+                                $this.text(this.countNum);
+                            }
+                        });
+                    });
+                }
+            });
+        }
+
+        $window.on('scroll resize', check_if_in_view);
+        $window.trigger('scroll');
+    }
 
     /** Site Year Auto Update */
     var year = new Date().getFullYear();
