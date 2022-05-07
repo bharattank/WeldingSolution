@@ -53,6 +53,22 @@ ol li {
         }
     }
 }
+.hero__overlay {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: $primary_color;
+    opacity: 0.9;
+}
+.contact__overlay {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: $secondary_color;
+    opacity: 0.8;
+}
 
 // Header
 .header-main {
@@ -108,6 +124,8 @@ ol li {
                     .dropdown-menu {
                         background-color: $primary_color;
                         padding: 20px 15px;
+                        border: 0;
+
                         li {
                             padding: 0;
                             .dropdown-item {
@@ -134,22 +152,14 @@ ol li {
         }
     }
 }
-.hero__overlay {
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-color: $primary_color;
-    opacity: 0.9;
+// Single Header
+.single {
+    .header-main {
+        background-color: $primary_color;
+        top: 0;
+    }
 }
-.contact__overlay {
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-color: $secondary_color;
-    opacity: 0.8;
-}
+
 // Header & Hero Section
 .ws-hero-section-main {
     // background-image: url("../images/BG\ Header\ INICIO.png");
@@ -189,7 +199,6 @@ ol li {
     }
 }
 .sticky {
-    padding: 20px 0 !important;
     position: fixed !important;
     top: 0;
     left: 0;
@@ -1743,7 +1752,7 @@ ol li {
 @media screen and (max-width: 991px) {
     .other-service-welding {
         .other-service-bg-welding {
-            padding: 50px 0 60px 0;
+            padding: 0px 0 60px 0;
             .can-expect-left-welding {
                 padding-left: 15px;
                 .other-heading {
@@ -1763,7 +1772,7 @@ ol li {
 @media screen and (max-width: 767px) {
     .other-service-welding{
         .other-service-bg-welding {
-            padding: 30px 0 30px 0;
+            padding: 0 0 30px 0;
             .can-expect-left-welding {
                 .other-heading {
                     font-size: 40px;
@@ -2687,30 +2696,33 @@ ol li {
     .ws-blog-single-content {
         background-color: #F4F4F4;
         padding: 30px 30px 50px;
-        margin: 100px 0 50px;
-        .main-heading {
+        margin: 200px 0 50px;
+        img {
+            margin-bottom: 30px;
+        }
+        h1,h2 {
             font-size: 79px;
             line-height: 100px;
             color: $primary_color;
             margin-bottom: 20px;
         }
-        .ws-last-updated {
-            color: $secondary_color;
-            text-decoration: none;
-        }
-        .ws-description {
-            font-size: 25px;
+        p {
+            font-size: 18px;
             line-height: 30px;
             color: #212121;
+            a {
+                color: $secondary_color;
+                text-decoration: none;
+            }
         }
-        .other-heading {
+        h3,h4,h5,h6 {
             font-size: 35px;
             line-height: 55px;
             color: $primary_color;
             padding-left: 20px;
             border-left: 5px solid $primary_color;
         }
-        .blog-content-list {
+        ul {
             li {
                 font-size: 25px;
                 line-height: 30px;
@@ -2740,7 +2752,7 @@ ol li {
         }
         .blog_share_single {
             .blog_share_title {
-                h6 {
+                span {
                     font-size: 22px;
                     line-height: 30px;
                 }
@@ -2816,24 +2828,24 @@ ol li {
 @media screen and (max-width: 991px) {
     .ws-blog-single {
         .ws-blog-single-content {
-            margin-top: 50px;
+            margin-top: 150px;
         }
     }
 }
 @media screen and (max-width: 767px) {
     .ws-blog-single {
         .ws-blog-single-content {
-            .main-heading {
+            h1,h2 {
                 font-size: 47px;
                 line-height: 60px;
                 margin-bottom: 10px;
             }
-            .other-heading {
+            h3,h4,h5 {
                 font-size: 28px;
                 line-height: 35px;
                 padding-left: 10px;
             }
-            .ws-description {
+            p {
                 font-size: 20px;
                 line-height: 26px;
             }
@@ -2868,21 +2880,23 @@ ol li {
 @media screen and (max-width: 480px) {
     .ws-blog-single {
         .ws-blog-single-content {
-            .main-heading {
+            padding: 15px;
+            margin-top: 130px;
+            h1,h2 {
                 font-size: 29px;
                 line-height: 40px;
             }
-            .last-update {
-                margin-bottom: 15px !important;
-                font-size: 16px;
-            }
-            .other-heading {
-                font-size: 22px;
-                line-height: 25px;
-            }
-            .ws-description {
+            p {
                 font-size: 16px;
                 line-height: 23px;
+                a {
+                    margin-bottom: 15px !important;
+                    font-size: 16px;
+                }
+            }
+            h3,h4,h5,h6 {
+                font-size: 22px;
+                line-height: 25px;
             }
             .blog-content-list {
                 padding-left: 15px;
@@ -2914,7 +2928,7 @@ ol li {
             }
             .blog_share_single {
                 .blog_share_title {
-                    h6 {
+                    span {
                         font-size: 17px;
                         line-height: 22px;
                     }
@@ -2939,7 +2953,7 @@ ol li {
 }
 // Blog Right Sidebar
 .blog__content {
-    padding: 100px 0 90px;
+    padding: 200px 0 90px;
     .blog__content_inner-main {
         .ws__blog_left {
             margin-bottom: 40px;
@@ -3131,9 +3145,13 @@ ol li {
         }
     }
 }
+@media screen and (max-width: 991px) {
+    .blog__content {
+        padding: 0;
+    }
+}
 @media screen and (max-width: 480px) {
     .blog__content {
-        padding: 50px 0;
         .blog__content_inner-main {
             .ws__blog_left {
                 margin-bottom: 30px;

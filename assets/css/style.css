@@ -53,6 +53,24 @@ ol li {
           transform: rotate(1deg) scale(1.1);
 }
 
+.hero__overlay {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #002639;
+  opacity: 0.9;
+}
+
+.contact__overlay {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #FF5134;
+  opacity: 0.8;
+}
+
 .header-main {
   position: fixed;
   top: 40px;
@@ -122,6 +140,7 @@ ol li {
 .header-main .ws-header .ws-hero-inner-main ul li .dropdown-menu {
   background-color: #002639;
   padding: 20px 15px;
+  border: 0;
 }
 
 .header-main .ws-header .ws-hero-inner-main ul li .dropdown-menu li {
@@ -161,22 +180,9 @@ ol li {
   transition: 500ms all;
 }
 
-.hero__overlay {
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+.single .header-main {
   background-color: #002639;
-  opacity: 0.9;
-}
-
-.contact__overlay {
   top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-color: #FF5134;
-  opacity: 0.8;
 }
 
 .ws-hero-section-main {
@@ -230,7 +236,6 @@ ol li {
 }
 
 .sticky {
-  padding: 20px 0 !important;
   position: fixed !important;
   top: 0;
   left: 0;
@@ -1824,7 +1829,7 @@ ol li {
 
 @media screen and (max-width: 991px) {
   .other-service-welding .other-service-bg-welding {
-    padding: 50px 0 60px 0;
+    padding: 0px 0 60px 0;
   }
   .other-service-welding .other-service-bg-welding .can-expect-left-welding {
     padding-left: 15px;
@@ -1842,7 +1847,7 @@ ol li {
 
 @media screen and (max-width: 767px) {
   .other-service-welding .other-service-bg-welding {
-    padding: 30px 0 30px 0;
+    padding: 0 0 30px 0;
   }
   .other-service-welding .other-service-bg-welding .can-expect-left-welding .other-heading {
     font-size: 40px;
@@ -2709,28 +2714,32 @@ ol li {
 .ws-blog-single .ws-blog-single-content {
   background-color: #F4F4F4;
   padding: 30px 30px 50px;
-  margin: 100px 0 50px;
+  margin: 200px 0 50px;
 }
 
-.ws-blog-single .ws-blog-single-content .main-heading {
+.ws-blog-single .ws-blog-single-content img {
+  margin-bottom: 30px;
+}
+
+.ws-blog-single .ws-blog-single-content h1, .ws-blog-single .ws-blog-single-content h2 {
   font-size: 79px;
   line-height: 100px;
   color: #002639;
   margin-bottom: 20px;
 }
 
-.ws-blog-single .ws-blog-single-content .ws-last-updated {
-  color: #FF5134;
-  text-decoration: none;
-}
-
-.ws-blog-single .ws-blog-single-content .ws-description {
-  font-size: 25px;
+.ws-blog-single .ws-blog-single-content p {
+  font-size: 18px;
   line-height: 30px;
   color: #212121;
 }
 
-.ws-blog-single .ws-blog-single-content .other-heading {
+.ws-blog-single .ws-blog-single-content p a {
+  color: #FF5134;
+  text-decoration: none;
+}
+
+.ws-blog-single .ws-blog-single-content h3, .ws-blog-single .ws-blog-single-content h4, .ws-blog-single .ws-blog-single-content h5, .ws-blog-single .ws-blog-single-content h6 {
   font-size: 35px;
   line-height: 55px;
   color: #002639;
@@ -2738,13 +2747,13 @@ ol li {
   border-left: 5px solid #002639;
 }
 
-.ws-blog-single .ws-blog-single-content .blog-content-list li {
+.ws-blog-single .ws-blog-single-content ul li {
   font-size: 25px;
   line-height: 30px;
   color: #212121;
 }
 
-.ws-blog-single .ws-blog-single-content .blog-content-list li a {
+.ws-blog-single .ws-blog-single-content ul li a {
   font-size: 25px;
   line-height: 30px;
   color: #FF5134;
@@ -2765,7 +2774,7 @@ ol li {
   line-height: 28px;
 }
 
-.ws-blog-single .ws-blog-single-content .blog_share_single .blog_share_title h6 {
+.ws-blog-single .ws-blog-single-content .blog_share_single .blog_share_title span {
   font-size: 22px;
   line-height: 30px;
 }
@@ -2847,22 +2856,22 @@ ol li {
 
 @media screen and (max-width: 991px) {
   .ws-blog-single .ws-blog-single-content {
-    margin-top: 50px;
+    margin-top: 150px;
   }
 }
 
 @media screen and (max-width: 767px) {
-  .ws-blog-single .ws-blog-single-content .main-heading {
+  .ws-blog-single .ws-blog-single-content h1, .ws-blog-single .ws-blog-single-content h2 {
     font-size: 47px;
     line-height: 60px;
     margin-bottom: 10px;
   }
-  .ws-blog-single .ws-blog-single-content .other-heading {
+  .ws-blog-single .ws-blog-single-content h3, .ws-blog-single .ws-blog-single-content h4, .ws-blog-single .ws-blog-single-content h5 {
     font-size: 28px;
     line-height: 35px;
     padding-left: 10px;
   }
-  .ws-blog-single .ws-blog-single-content .ws-description {
+  .ws-blog-single .ws-blog-single-content p {
     font-size: 20px;
     line-height: 26px;
   }
@@ -2888,21 +2897,25 @@ ol li {
 }
 
 @media screen and (max-width: 480px) {
-  .ws-blog-single .ws-blog-single-content .main-heading {
+  .ws-blog-single .ws-blog-single-content {
+    padding: 15px;
+    margin-top: 130px;
+  }
+  .ws-blog-single .ws-blog-single-content h1, .ws-blog-single .ws-blog-single-content h2 {
     font-size: 29px;
     line-height: 40px;
   }
-  .ws-blog-single .ws-blog-single-content .last-update {
+  .ws-blog-single .ws-blog-single-content p {
+    font-size: 16px;
+    line-height: 23px;
+  }
+  .ws-blog-single .ws-blog-single-content p a {
     margin-bottom: 15px !important;
     font-size: 16px;
   }
-  .ws-blog-single .ws-blog-single-content .other-heading {
+  .ws-blog-single .ws-blog-single-content h3, .ws-blog-single .ws-blog-single-content h4, .ws-blog-single .ws-blog-single-content h5, .ws-blog-single .ws-blog-single-content h6 {
     font-size: 22px;
     line-height: 25px;
-  }
-  .ws-blog-single .ws-blog-single-content .ws-description {
-    font-size: 16px;
-    line-height: 23px;
   }
   .ws-blog-single .ws-blog-single-content .blog-content-list {
     padding-left: 15px;
@@ -2930,7 +2943,7 @@ ol li {
     line-height: 20px;
     margin-left: 0 !important;
   }
-  .ws-blog-single .ws-blog-single-content .blog_share_single .blog_share_title h6 {
+  .ws-blog-single .ws-blog-single-content .blog_share_single .blog_share_title span {
     font-size: 17px;
     line-height: 22px;
   }
@@ -2944,7 +2957,7 @@ ol li {
 }
 
 .blog__content {
-  padding: 100px 0 90px;
+  padding: 200px 0 90px;
 }
 
 .blog__content .blog__content_inner-main .ws__blog_left {
@@ -3168,10 +3181,13 @@ ol li {
   }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 991px) {
   .blog__content {
-    padding: 50px 0;
+    padding: 0;
   }
+}
+
+@media screen and (max-width: 480px) {
   .blog__content .blog__content_inner-main .ws__blog_left {
     margin-bottom: 30px;
   }
