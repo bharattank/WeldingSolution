@@ -134,7 +134,22 @@ ol li {
         }
     }
 }
-
+.hero__overlay {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: $primary_color;
+    opacity: 0.9;
+}
+.contact__overlay {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: $secondary_color;
+    opacity: 0.8;
+}
 // Header & Hero Section
 .ws-hero-section-main {
     // background-image: url("../images/BG\ Header\ INICIO.png");
@@ -144,14 +159,6 @@ ol li {
     background-clip: padding-box;
     background-size: cover;
     padding: 250px 0 300px 0;
-    .hero__overlay {
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        background-color: #042A3D;
-        opacity: 0.9;
-    }
     .ws-hero-section-down {
         position: relative;
         z-index: 1;
@@ -854,13 +861,14 @@ ol li {
             .welding-type-box {
                 min-height: 470px;
                 padding: 51px 5px 50px 34px;
+                position: relative;
                 .box-inner-up {
                     font-size: 43px;
                     line-height: 52px;
                     max-width: 207px;
                     color: $text_white;
                     position: relative;
-                    z-index: 1;
+                    z-index: 2;
                 }
                 .box-inner-down {
                     a {
@@ -869,8 +877,16 @@ ol li {
                         color: $text_white;
                         text-decoration: none;
                         position: relative;
-                        z-index: 1;
+                        z-index: 2;
                     }
+                }
+                .box__inner_overlay_default {
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
+                    background-color: $secondary_color;
+                    opacity: 0.7;
                 }
                 .box__inner_overlay {
                     bottom: 100%;
@@ -881,6 +897,7 @@ ol li {
                     width: 100%;
                     height:0;
                     transition: .5s ease;
+                    z-index: 1;
                 }
                 &:hover {
                     .box__inner_overlay {
@@ -890,14 +907,14 @@ ol li {
                 }
             }
             .welding-type-box-one {
-                background-image: url("../images/FRANJA\ MIG-MAG.png");
+                background-image: url("../images/card__img_1.jpg");
                 background-position: 0% 0%;
                 background-repeat: no-repeat;
                 background-clip: padding-box;
                 background-size: cover;
             }
             .welding-type-box-two {
-                background-image: url("../images/Rectangle\ TIG.png");
+                background-image: url("../images/card__img_2.jpg");
                 background-position: 0% 0%;
                 background-repeat: no-repeat;
                 background-clip: padding-box;
@@ -913,22 +930,33 @@ ol li {
                         }
                     }
                 }
-                &:hover {
-                    .box-inner-up {
-                        color: $text_white;
-                    }
-                    .box-inner-down { 
-                        a {
-                            color: $text_white;
-                            svg {
-                                fill: $text_white;
-                            }
-                        }
-                    }
+                .box__inner_overlay_default {
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
+                    background-color: $text_white;
+                    opacity: 0.7;
                 }
+                .box__inner_overlay {
+                    background-color: $secondary_color;
+                }
+                // &:hover {
+                //     .box-inner-up {
+                //         color: $text_white;
+                //     }
+                //     .box-inner-down { 
+                //         a {
+                //             color: $text_white;
+                //             svg {
+                //                 fill: $text_white;
+                //             }
+                //         }
+                //     }
+                // }
             }
             .welding-type-box-three {
-                background-image: url("../images/Franja\ RESISTENCIA.png");
+                background-image: url("../images/card__img_3.jpg");
                 background-position: 0% 0%;
                 background-repeat: no-repeat;
                 background-clip: padding-box;
@@ -1472,7 +1500,7 @@ ol li {
 .contact--us {
     padding: 110px 0;
     .contact--us__box {
-        a {
+        a { 
             text-decoration: none;
             text-align: right;
             .ws-description {
@@ -1484,6 +1512,10 @@ ol li {
                 b {
                     margin-top: 7px;
                 }
+            }
+            .contact--us__box--img {
+                @include Welding-btn;
+                padding: 15px 20px;
             }
         }
     }
@@ -1497,6 +1529,9 @@ ol li {
                 .ws-description {
                     padding-right: 0;
                     padding-left: 29px;
+                }
+                .contact--us__box--img {
+                    margin-bottom: 30px;
                 }
             }
         }
@@ -1517,6 +1552,9 @@ ol li {
                     padding-left: 0;
                     font-size: 21px;
                     line-height: 24px;
+                }
+                .contact--us__box--img {
+                    margin-bottom: 15px;
                 }
             }
         }
@@ -1844,25 +1882,13 @@ ol li {
     }
     .professionals-down {
         background-color: $primary_color;
-        max-width: 1588px;
+        // max-width: 1588px;
         padding: 43px 76px;
-        // margin-top: -206px;
-        // position: relative;
-        // z-index: 1;
-        // margin-left: -50px;
-        // margin-right: 50px;
         .professionals-down-inner{
             .ws-description {
                 font-size: 82px;
                 line-height: 100px;
                 color: $text_white;
-                &::before {
-                    content: "";
-                    display: block;
-                    width: 96px;
-                    height: 10px;
-                    background: $secondary_color;
-                }
                 &::after {
                     content: "+";
                 }
@@ -1946,13 +1972,6 @@ ol li {
                 .ws-description {
                     font-size: 40px;
                     line-height: 50px;
-                    &::before {
-                        content: "";
-                        display: block;
-                        width: 40px;
-                        height: 6px;
-                        background: $secondary_color;
-                    }
                 }
                 .down-text {
                     font-size: 28px;
@@ -2207,9 +2226,6 @@ ol li {
 // Help Business US
 .help-business-us {
     .help-business-content {
-        .other-heading {
-            margin-bottom: 180px;
-        }
         .help-business-btn-us {
             a {
                 padding: 13px 64px;
@@ -2239,16 +2255,6 @@ ol li {
         }
     }
 }
-@media screen and (max-width: 991px) {
-    .help-business-us {
-        .help-business-content {
-            .other-heading {
-                margin-bottom: 30px;
-            }
-        }
-    }
-}
-
 @media screen and (max-width: 480px) {
     .help-business-us {
         .help-business-content {
@@ -2264,6 +2270,7 @@ ol li {
 // <!-- Professionals -->
 .professionals-welding-us {
     padding: 0;
+    background-color: #002639;
 }
 
 // <!-- Process and jobs -->
@@ -2615,9 +2622,9 @@ ol li {
 // Production Process 
 .production--process-contact {
     background-image: unset;
-    background-color: $secondary_color;
     .production--process-contact__inner{
         max-width: 1000px;
+        z-index: 2;
         .production--process__left {
             .other-heding {
                 max-width: 100%;
@@ -2636,6 +2643,10 @@ ol li {
             }
         }
     }
+}
+.form-control,.form-select  {
+    padding: 15px;
+    color: #6F6F6F;
 }
 // END Contact Page
 // Blog Page
@@ -3262,6 +3273,20 @@ ol li {
                     a {
                         color: #fff;
                         transition: .5s;
+                        &:hover {
+                            color: $secondary_color;
+                        }
+                    }
+                    &::before {
+                        position: absolute;
+                        content: '';
+                        top: -48px;
+                        left: 50%;
+                        width: 40px;
+                        height: 50px;
+                        background: #181614;
+                        margin-left: -20px;
+                        clip-path: polygon(52% 77%, 0% 100%, 100% 100%);
                     }
                 }
             }

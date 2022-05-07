@@ -53,30 +53,44 @@ ol li {
           transform: rotate(1deg) scale(1.1);
 }
 
-.header-main {
-  position: fixed;
-  top: 40px;
-  right: 0;
-  z-index: 3;
-  left: 0;
-  width: 100%;
+.ws-hero-section-main {
+  background-image: url("../images/pexels-photo-10414799.jpeg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-clip: padding-box;
+  background-size: cover;
+  padding: 94px 0 300px 0;
 }
 
-.header-main .ws-header {
-  padding-bottom: 0;
+.ws-hero-section-main .hero__overlay {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #042A3D;
+  opacity: 0.9;
+}
+
+.ws-hero-section-main .ws-header {
+  padding-bottom: 168px;
   position: relative;
   z-index: 3;
 }
 
-.header-main .ws-header .ws-hero-inner-main .ws-nav-menu {
+.ws-hero-section-main .ws-hero-section-down {
+  position: relative;
+  z-index: 1;
+}
+
+.ws-hero-section-main .ws-hero-inner-main .ws-nav-menu {
   max-width: 1000px;
 }
 
-.header-main .ws-header .ws-hero-inner-main ul {
+.ws-hero-section-main .ws-hero-inner-main ul {
   margin: 0;
 }
 
-.header-main .ws-header .ws-hero-inner-main ul li {
+.ws-hero-section-main .ws-hero-inner-main ul li {
   list-style-type: none;
   padding: 0 25px;
   -webkit-transition: all .5s;
@@ -84,64 +98,35 @@ ol li {
   position: relative;
 }
 
-.header-main .ws-header .ws-hero-inner-main ul li:hover > a {
+.ws-hero-section-main .ws-hero-inner-main ul li:hover > a {
   color: #FF5134 !important;
   -webkit-transition: all .5s;
   transition: all .5s;
 }
 
-.header-main .ws-header .ws-hero-inner-main ul li:hover > a::before {
-  content: "";
-  display: block;
-  width: 60px;
-  height: 7px;
-  background: #FF5134;
-  -webkit-transition: all .5s;
-  transition: all .5s;
-}
-
-.header-main .ws-header .ws-hero-inner-main ul li a {
+.ws-hero-section-main .ws-hero-inner-main ul li a {
   text-decoration: none;
   font-size: 30px;
   color: #fff !important;
 }
 
-.header-main .ws-header .ws-hero-inner-main ul li a::after {
-  position: absolute;
-  right: 0;
-}
-
-.header-main .ws-header .ws-hero-inner-main ul li a::before {
-  content: "";
-  display: block;
-  width: 60px;
-  height: 7px;
-  background: transparent;
-}
-
-.header-main .ws-header .ws-hero-inner-main ul li .dropdown-menu {
+.ws-hero-section-main .ws-hero-inner-main ul li .dropdown-menu {
   background-color: #002639;
-  padding: 20px 15px;
 }
 
-.header-main .ws-header .ws-hero-inner-main ul li .dropdown-menu li {
+.ws-hero-section-main .ws-hero-inner-main ul li .dropdown-menu li {
   padding: 0;
 }
 
-.header-main .ws-header .ws-hero-inner-main ul li .dropdown-menu li .dropdown-item {
+.ws-hero-section-main .ws-hero-inner-main ul li .dropdown-menu li .dropdown-item {
   font-size: 20px;
-  padding: 0.25rem 0;
 }
 
-.header-main .ws-header .ws-hero-inner-main ul li .dropdown-menu li .dropdown-item::before {
-  content: unset;
-}
-
-.header-main .ws-header .ws-hero-inner-main ul li .dropdown-menu li .dropdown-item:hover {
+.ws-hero-section-main .ws-hero-inner-main ul li .dropdown-menu li .dropdown-item:hover {
   background: transparent;
 }
 
-.header-main .ws-header .ws-hero-inner-main .ws-hero-button a {
+.ws-hero-section-main .ws-hero-inner-main .ws-hero-button a {
   text-decoration: none;
   color: #fff;
   background-color: #FF5134;
@@ -154,43 +139,11 @@ ol li {
   font-size: 22px;
 }
 
-.header-main .ws-header .ws-hero-inner-main .ws-hero-button a:hover {
+.ws-hero-section-main .ws-hero-inner-main .ws-hero-button a:hover {
   -webkit-box-shadow: none;
           box-shadow: none;
   -webkit-transition: 500ms all;
   transition: 500ms all;
-}
-
-.hero__overlay {
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-color: #002639;
-  opacity: 0.9;
-}
-
-.contact__overlay {
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-color: #FF5134;
-  opacity: 0.8;
-}
-
-.ws-hero-section-main {
-  background-image: url("../images/pexels-photo-10414799.jpeg");
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-clip: padding-box;
-  background-size: cover;
-  padding: 250px 0 300px 0;
-}
-
-.ws-hero-section-main .ws-hero-section-down {
-  position: relative;
-  z-index: 1;
 }
 
 .ws-hero-section-main .ws-hero-section-down .hero-heading {
@@ -246,12 +199,9 @@ ol li {
   transition: all .5s ease;
 }
 
-@media screen and (min-width: 992px) and (max-width: 1130px) {
-  .header-main .ws-header .ws-hero-inner-main ul {
-    margin: 0;
-  }
-  .header-main .ws-header .ws-hero-inner-main ul li {
-    padding: 0 8px;
+@media screen and (min-width: 992px) and (max-width: 1080px) {
+  .ws-hero-section-main .ws-hero-inner-main ul li {
+    padding: 0 13px;
   }
 }
 
@@ -387,18 +337,8 @@ ol li {
 }
 
 @media screen and (max-width: 991px) {
-  .header-main {
-    background-color: #002639;
-    top: 0;
-  }
-  .header-main .ws-nav-menu {
-    padding-bottom: 40px;
-  }
-  .header-main .ws-nav-menu .dropdown-menu {
-    text-align: center;
-  }
   .ws-hero-section-main {
-    padding: 175px 0 100px 0;
+    padding: 30px 0 100px 0;
   }
   .ws-hero-section-main .ws-header {
     padding-bottom: 50px;
@@ -416,40 +356,8 @@ ol li {
 }
 
 @media screen and (max-width: 576px) {
-  .header-main .ws-header .ws-hero-inner-main .navbar-brand img {
-    width: 80px;
-    height: 60px;
-  }
-  .header-main .ws-header .ws-hero-inner-main ul {
-    margin: 0;
-  }
-  .header-main .ws-header .ws-hero-inner-main ul li a {
-    font-size: 22px;
-    line-height: normal;
-  }
-  .header-main .ws-header .ws-hero-inner-main .ws-hero-button a {
-    text-decoration: none;
-    color: #fff;
-    background-color: #FF5134;
-    -webkit-box-shadow: 6px 6px 0px #FFCEC6;
-            box-shadow: 6px 6px 0px #FFCEC6;
-    -webkit-transition: 500ms all;
-    transition: 500ms all;
-    text-transform: uppercase;
-    padding: 15px;
-    font-size: 20px;
-  }
-  .header-main .ws-header .ws-hero-inner-main .ws-hero-button a:hover {
-    -webkit-box-shadow: none;
-            box-shadow: none;
-    -webkit-transition: 500ms all;
-    transition: 500ms all;
-  }
-  .header-main .ws-header .ws-hero-inner-main .ws-nav-menu {
-    padding-bottom: 20px;
-  }
   .ws-hero-section-main {
-    padding: 130px 0 50px 0;
+    padding: 20px 0 50px 0;
   }
   .ws-hero-section-main .ws-header {
     padding-bottom: 20px;
@@ -490,7 +398,7 @@ ol li {
     padding: 0 !important;
   }
   .ws-hero-section-main {
-    padding: 120px 0 40px 0;
+    padding: 20px 0 30px 0;
   }
   .ws-hero-section-main .ws-hero-section-down .hero-heading {
     font-size: 33px;
@@ -932,7 +840,6 @@ ol li {
 .welding-type .welding-type-inner-main .welding-type-inner-bottom .welding-type-box {
   min-height: 470px;
   padding: 51px 5px 50px 34px;
-  position: relative;
 }
 
 .welding-type .welding-type-inner-main .welding-type-inner-bottom .welding-type-box .box-inner-up {
@@ -941,7 +848,7 @@ ol li {
   max-width: 207px;
   color: #fff;
   position: relative;
-  z-index: 2;
+  z-index: 1;
 }
 
 .welding-type .welding-type-inner-main .welding-type-inner-bottom .welding-type-box .box-inner-down a {
@@ -950,16 +857,7 @@ ol li {
   color: #fff;
   text-decoration: none;
   position: relative;
-  z-index: 2;
-}
-
-.welding-type .welding-type-inner-main .welding-type-inner-bottom .welding-type-box .box__inner_overlay_default {
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-color: #FF5134;
-  opacity: 0.7;
+  z-index: 1;
 }
 
 .welding-type .welding-type-inner-main .welding-type-inner-bottom .welding-type-box .box__inner_overlay {
@@ -972,7 +870,6 @@ ol li {
   height: 0;
   -webkit-transition: .5s ease;
   transition: .5s ease;
-  z-index: 1;
 }
 
 .welding-type .welding-type-inner-main .welding-type-inner-bottom .welding-type-box:hover .box__inner_overlay {
@@ -981,7 +878,7 @@ ol li {
 }
 
 .welding-type .welding-type-inner-main .welding-type-inner-bottom .welding-type-box-one {
-  background-image: url("../images/card__img_1.jpg");
+  background-image: url("../images/FRANJA MIG-MAG.png");
   background-position: 0% 0%;
   background-repeat: no-repeat;
   background-clip: padding-box;
@@ -989,7 +886,7 @@ ol li {
 }
 
 .welding-type .welding-type-inner-main .welding-type-inner-bottom .welding-type-box-two {
-  background-image: url("../images/card__img_2.jpg");
+  background-image: url("../images/Rectangle TIG.png");
   background-position: 0% 0%;
   background-repeat: no-repeat;
   background-clip: padding-box;
@@ -1008,21 +905,20 @@ ol li {
   fill: #002639;
 }
 
-.welding-type .welding-type-inner-main .welding-type-inner-bottom .welding-type-box-two .box__inner_overlay_default {
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-color: #fff;
-  opacity: 0.7;
+.welding-type .welding-type-inner-main .welding-type-inner-bottom .welding-type-box-two:hover .box-inner-up {
+  color: #fff;
 }
 
-.welding-type .welding-type-inner-main .welding-type-inner-bottom .welding-type-box-two .box__inner_overlay {
-  background-color: #FF5134;
+.welding-type .welding-type-inner-main .welding-type-inner-bottom .welding-type-box-two:hover .box-inner-down a {
+  color: #fff;
+}
+
+.welding-type .welding-type-inner-main .welding-type-inner-bottom .welding-type-box-two:hover .box-inner-down a svg {
+  fill: #fff;
 }
 
 .welding-type .welding-type-inner-main .welding-type-inner-bottom .welding-type-box-three {
-  background-image: url("../images/card__img_3.jpg");
+  background-image: url("../images/Franja RESISTENCIA.png");
   background-position: 0% 0%;
   background-repeat: no-repeat;
   background-clip: padding-box;
@@ -1555,25 +1451,6 @@ ol li {
   margin-top: 7px;
 }
 
-.contact--us .contact--us__box a .contact--us__box--img {
-  text-decoration: none;
-  color: #fff;
-  background-color: #FF5134;
-  -webkit-box-shadow: 6px 6px 0px #FFCEC6;
-          box-shadow: 6px 6px 0px #FFCEC6;
-  -webkit-transition: 500ms all;
-  transition: 500ms all;
-  text-transform: uppercase;
-  padding: 15px 20px;
-}
-
-.contact--us .contact--us__box a .contact--us__box--img:hover {
-  -webkit-box-shadow: none;
-          box-shadow: none;
-  -webkit-transition: 500ms all;
-  transition: 500ms all;
-}
-
 @media screen and (max-width: 991px) {
   .contact--us {
     padding: 50px 0;
@@ -1584,9 +1461,6 @@ ol li {
   .contact--us .contact--us__box a .ws-description {
     padding-right: 0;
     padding-left: 29px;
-  }
-  .contact--us .contact--us__box a .contact--us__box--img {
-    margin-bottom: 30px;
   }
 }
 
@@ -1610,9 +1484,6 @@ ol li {
     padding-left: 0;
     font-size: 21px;
     line-height: 24px;
-  }
-  .contact--us .contact--us__box a .contact--us__box--img {
-    margin-bottom: 15px;
   }
 }
 
@@ -1947,6 +1818,7 @@ ol li {
 
 .professionals-welding .professionals-down {
   background-color: #002639;
+  max-width: 1588px;
   padding: 43px 76px;
 }
 
@@ -1954,6 +1826,14 @@ ol li {
   font-size: 82px;
   line-height: 100px;
   color: #fff;
+}
+
+.professionals-welding .professionals-down .professionals-down-inner .ws-description::before {
+  content: "";
+  display: block;
+  width: 96px;
+  height: 10px;
+  background: #FF5134;
 }
 
 .professionals-welding .professionals-down .professionals-down-inner .ws-description::after {
@@ -2024,6 +1904,13 @@ ol li {
   .professionals-welding .professionals-down .professionals-down-inner .ws-description {
     font-size: 40px;
     line-height: 50px;
+  }
+  .professionals-welding .professionals-down .professionals-down-inner .ws-description::before {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 6px;
+    background: #FF5134;
   }
   .professionals-welding .professionals-down .professionals-down-inner .down-text {
     font-size: 28px;
@@ -2266,6 +2153,9 @@ ol li {
 }
 
 @media screen and (min-width: 992px) {
+  .ws-hero-section-main-us {
+    padding: 94px 0 200px 0;
+  }
   .ws-hero-section-main-us .hero-heading {
     max-width: 100% !important;
   }
@@ -2273,6 +2163,10 @@ ol li {
 
 .ws-hero-section-main-us .hero-heading {
   max-width: 100% !important;
+}
+
+.help-business-us .help-business-content .other-heading {
+  margin-bottom: 180px;
 }
 
 .help-business-us .help-business-content .help-business-btn-us a {
@@ -2303,6 +2197,12 @@ ol li {
   background-position: center center;
 }
 
+@media screen and (max-width: 991px) {
+  .help-business-us .help-business-content .other-heading {
+    margin-bottom: 30px;
+  }
+}
+
 @media screen and (max-width: 480px) {
   .help-business-us .help-business-content .help-business-btn-us a {
     padding: 10px 20px;
@@ -2312,7 +2212,6 @@ ol li {
 
 .professionals-welding-us {
   padding: 0;
-  background-color: #002639;
 }
 
 .process-jobs {
@@ -2643,11 +2542,11 @@ ol li {
 
 .production--process-contact {
   background-image: unset;
+  background-color: #FF5134;
 }
 
 .production--process-contact .production--process-contact__inner {
   max-width: 1000px;
-  z-index: 2;
 }
 
 .production--process-contact .production--process-contact__inner .production--process__left .other-heding {
@@ -2663,11 +2562,6 @@ ol li {
 }
 
 .production--process-contact .production--process-contact__inner .production--process__right--form .form-select {
-  padding: 15px;
-  color: #6F6F6F;
-}
-
-.form-control, .form-select {
   padding: 15px;
   color: #6F6F6F;
 }
@@ -3319,23 +3213,6 @@ ol li {
   transition: .5s;
 }
 
-.ws-services .ws-services__inner-main .ws-services__right .ws-contact .phone a:hover {
-  color: #FF5134;
-}
-
-.ws-services .ws-services__inner-main .ws-services__right .ws-contact .phone::before {
-  position: absolute;
-  content: '';
-  top: -48px;
-  left: 50%;
-  width: 40px;
-  height: 50px;
-  background: #181614;
-  margin-left: -20px;
-  -webkit-clip-path: polygon(52% 77%, 0% 100%, 100% 100%);
-          clip-path: polygon(52% 77%, 0% 100%, 100% 100%);
-}
-
 @media screen and (max-width: 480px) {
   .ws-services {
     padding: 50px 0;
@@ -3480,4 +3357,4 @@ ol li {
   -webkit-animation-duration: 10s;
           animation-duration: 10s;
 }
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=style copy.css.map */
