@@ -72,6 +72,12 @@ p {
     background-color: $secondary_color;
     opacity: 0.8;
 }
+.logo__small_secondary {
+    fill: $secondary_color;
+}
+.logo__small_primary {
+    fill: $primary_color;
+}
 // Welding List
 .welding__list {
     li {
@@ -163,7 +169,7 @@ p {
                     }
                     .dropdown-menu {
                         background-color: $text_white;
-                        padding: 20px 15px;
+                        padding: 20px;
                         border: 0;
 
                         li {
@@ -586,7 +592,10 @@ p {
             margin-bottom: 25px;
             background-image: url('../images/Icon\ SALARIO.svg');
             background-size: 75%;
-            
+            background-position: 60px 20px;
+            &:hover {
+                background-position: 60px 30px;
+            }
         }
     }
 }
@@ -694,6 +703,10 @@ p {
         padding: 20px 0 30px 0;
         .help-business-logo {
             padding-bottom: 10px;
+            svg {
+                width: 80px;
+                height: 50px;
+            }
         }
         .help-business-content {
             padding-right: 0;
@@ -1136,6 +1149,11 @@ p {
             color: $primary_color;
             margin-top: 25px;
             max-width: 530px;
+        }
+        .expect-img-name {
+            svg {
+                margin-right: 15px;
+            }
         }
     }
 }
@@ -2240,6 +2258,11 @@ p {
             color: #212121;
             max-width: 388px;
         }
+        svg {
+            .s0 {
+                fill: $primary_color;
+            }
+        }
     }
 }
 .can-expect-welding {
@@ -2256,6 +2279,9 @@ p {
     }
 }
 @media screen and (max-width: 767px) {
+    .can-expect-welding {
+        padding: 100px 0 50px 0;
+    }
     .tools {
         padding: 0;
         .tools-inner {
@@ -2271,6 +2297,9 @@ p {
     }
 }
 @media screen and (max-width: 480px) {
+    .can-expect-welding {
+        padding: 0px 0 30px 0;
+    }
     .tools {
         .tools-inner {
             .other-heading {
@@ -2318,16 +2347,6 @@ p {
                     transition: 500ms all;
                 }
             }
-        }
-    }
-    .business-right-box {
-        .help-box-one {
-            background-color: $primary_color;
-            margin-bottom: 25px;
-            background-image: url('../images/IMG\ Proriedades\ 01.png');
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center center;
         }
     }
 }
@@ -2479,12 +2498,17 @@ p {
             .also-like-down-inner {
                 flex-basis: 20%;
                 .also-like-down-inner-content {
+                    svg {
+                        .s0 {
+                            fill: $secondary_color;
+                        }
+                    }
                     margin: 0 18px;
                     padding: 50px 10px 25px 50px;
                     background-color: #F1F1F1;
                     &:hover .overlay-main {
                         height: 100%;
-                      }
+                    }
                     .other-heading {
                         font-size: 34px;
                         line-height: 40px;
@@ -3292,6 +3316,7 @@ p {
         .accordion-collapse {
             .accordion-body  {
                 color: $primary_color;
+                font-size: 18px;
             }
         }
         .accordion-button:focus {
