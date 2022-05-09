@@ -39,6 +39,10 @@ ol li {
   list-style-type: none;
 }
 
+p {
+  font-family: "Open Sans";
+}
+
 .hover__image {
   overflow: hidden;
 }
@@ -69,6 +73,36 @@ ol li {
   left: 0;
   background-color: #FF5134;
   opacity: 0.8;
+}
+
+.welding__list li {
+  list-style-type: none;
+}
+
+.welding__list li a {
+  font-size: 30px;
+  line-height: 55px;
+  color: #002639;
+  text-decoration: none;
+  display: inline-block;
+  padding-left: 15px;
+  position: relative;
+}
+
+.welding__list li a::before {
+  content: '';
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' width='30' height='30' viewBox='0 0 256 256' xml:space='preserve'%3E%3Cdesc%3ECreated with Fabric.js 1.7.22%3C/desc%3E%3Cdefs%3E%3C/defs%3E%3Cg transform='translate(128 128) scale(0.72 0.72)' style=''%3E%3Cg style='stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;' transform='translate(-175.05 -175.05000000000004) scale(3.89 3.89)'%3E%3Cpath d='M 31.63 79.75 c -0.009 0 -0.017 0 -0.026 0 c -1.156 -0.008 -2.251 -0.515 -3.005 -1.39 L 0.969 46.273 c -1.441 -1.674 -1.253 -4.2 0.421 -5.642 c 1.673 -1.442 4.199 -1.253 5.641 0.421 L 31.67 69.666 l 51.333 -58.065 c 1.464 -1.655 3.991 -1.811 5.646 -0.347 c 1.655 1.463 1.811 3.991 0.348 5.646 l -54.37 61.5 C 33.868 79.259 32.776 79.75 31.63 79.75 z' style='stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(255,81,52); fill-rule: nonzero; opacity: 1;' transform=' matrix(1 0 0 1 0 0) ' stroke-linecap='round'%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  height: 30px;
+  width: 30px;
+  display: block;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 12px;
+  left: -30px;
+}
+
+.welding__list.small__list li a::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' width='22' height='16' viewBox='0 0 256 256' xml:space='preserve'%3E%3Cdesc%3ECreated with Fabric.js 1.7.22%3C/desc%3E%3Cdefs%3E%3C/defs%3E%3Cg transform='translate(128 128) scale(0.72 0.72)' style=''%3E%3Cg style='stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;' transform='translate(-175.05 -175.05000000000004) scale(3.89 3.89)'%3E%3Cpath d='M 31.63 79.75 c -0.009 0 -0.017 0 -0.026 0 c -1.156 -0.008 -2.251 -0.515 -3.005 -1.39 L 0.969 46.273 c -1.441 -1.674 -1.253 -4.2 0.421 -5.642 c 1.673 -1.442 4.199 -1.253 5.641 0.421 L 31.67 69.666 l 51.333 -58.065 c 1.464 -1.655 3.991 -1.811 5.646 -0.347 c 1.655 1.463 1.811 3.991 0.348 5.646 l -54.37 61.5 C 33.868 79.259 32.776 79.75 31.63 79.75 z' style='stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(255,81,52); fill-rule: nonzero; opacity: 1;' transform=' matrix(1 0 0 1 0 0) ' stroke-linecap='round'%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 }
 
 .header-main {
@@ -138,7 +172,7 @@ ol li {
 }
 
 .header-main .ws-header .ws-hero-inner-main ul li .dropdown-menu {
-  background-color: #002639;
+  background-color: #fff;
   padding: 20px 15px;
   border: 0;
 }
@@ -150,6 +184,7 @@ ol li {
 .header-main .ws-header .ws-hero-inner-main ul li .dropdown-menu li .dropdown-item {
   font-size: 20px;
   padding: 0.25rem 0;
+  color: #002639 !important;
 }
 
 .header-main .ws-header .ws-hero-inner-main ul li .dropdown-menu li .dropdown-item::before {
@@ -158,6 +193,7 @@ ol li {
 
 .header-main .ws-header .ws-hero-inner-main ul li .dropdown-menu li .dropdown-item:hover {
   background: transparent;
+  color: #FF5134 !important;
 }
 
 .header-main .ws-header .ws-hero-inner-main .ws-hero-button a {
@@ -1023,7 +1059,7 @@ ol li {
 }
 
 .welding-type .welding-type-inner-main .welding-type-inner-bottom .welding-type-box-two .box__inner_overlay {
-  background-color: #FF5134;
+  background-color: #fff;
 }
 
 .welding-type .welding-type-inner-main .welding-type-inner-bottom .welding-type-box-three {
@@ -1122,11 +1158,16 @@ ol li {
   color: #212121;
   text-decoration: none;
   padding-left: 15px;
+  position: relative;
 }
 
 .can-expect .expect-right {
   padding: 45px;
   background-color: #F4F4F4;
+}
+
+.can-expect .expect-right .expect-rating svg .a {
+  fill: #FF5134;
 }
 
 .can-expect .expect-right .other-heading {
@@ -1332,7 +1373,6 @@ ol li {
 
 .service--card .service--card__inner .service--card__main .service--card__left--down .card-list {
   min-height: 230px;
-  padding: 0;
   margin-bottom: 15px;
 }
 
@@ -1396,7 +1436,6 @@ ol li {
   }
   .service--card .service--card__inner .service--card__main .service--card__left--down .card-list {
     min-height: 230px;
-    padding: 0;
     margin-bottom: 15px;
   }
   .service--card .service--card__inner .service--card__main .service--card__left--down .card-list li a {
@@ -1700,6 +1739,7 @@ ol li {
   display: inline-block;
   font-family: 'Open Sans';
   word-break: break-word;
+  max-width: 270px;
 }
 
 .ws-main--footer .scroll__to_top {
@@ -1952,7 +1992,8 @@ ol li {
 
 .professionals-welding .professionals-down {
   background-color: #002639;
-  padding: 43px 76px;
+  padding: 100px 0;
+  margin-bottom: 200px;
 }
 
 .professionals-welding .professionals-down .professionals-down-inner .ws-description {
@@ -1985,6 +2026,9 @@ ol li {
     line-height: 28px;
     margin-top: 20px;
   }
+  .professionals-welding .professionals-down {
+    margin-bottom: 100px;
+  }
   .professionals-welding .professionals-down .professionals-down-inner .ws-description {
     font-size: 60px;
     line-height: 70px;
@@ -2009,6 +2053,9 @@ ol li {
     line-height: 35px;
     padding: 11px 30px;
   }
+  .professionals-down {
+    margin-bottom: 50px;
+  }
 }
 
 @media screen and (max-width: 480px) {
@@ -2025,6 +2072,7 @@ ol li {
   }
   .professionals-welding .professionals-down {
     padding: 30px 30px;
+    margin-bottom: 30px;
   }
   .professionals-welding .professionals-down .professionals-down-inner .ws-description {
     font-size: 40px;
@@ -2034,6 +2082,10 @@ ol li {
     font-size: 28px;
     line-height: 42px;
   }
+}
+
+.about-us .professionals-down {
+  margin-bottom: 0;
 }
 
 .we-inform-bg {
@@ -2158,6 +2210,14 @@ ol li {
           box-shadow: none;
   -webkit-transition: 500ms all;
   transition: 500ms all;
+}
+
+.why-hire .why-hire-left {
+  border-radius: 50%;
+}
+
+.why-hire .why-hire-left img {
+  border-radius: 50%;
 }
 
 @media screen and (max-width: 991px) {
@@ -2348,6 +2408,8 @@ ol li {
   color: #002639;
   text-decoration: none;
   display: inline-block;
+  padding-left: 15px;
+  position: relative;
 }
 
 .process-jobs .process-jobs-right .process-list li a::after {
@@ -3234,7 +3296,7 @@ ol li {
 }
 
 .ws-services .ws-services__inner-main .ws-services__left .text {
-  font-size: 16px;
+  font-size: 20px;
   line-height: 26px;
   font-weight: 400;
   color: #212121;
@@ -3244,8 +3306,16 @@ ol li {
 }
 
 .ws-services .ws-services__inner-main .accordion {
-  border: 1px solid darkgray;
+  border: 1px solid rgba(0, 0, 0, 0.1);
   margin-bottom: 30px;
+}
+
+.ws-services .ws-services__inner-main .accordion-button {
+  font-size: 22px;
+}
+
+.ws-services .ws-services__inner-main .accordion-collapse .accordion-body {
+  color: #002639;
 }
 
 .ws-services .ws-services__inner-main .accordion-button:focus {
@@ -3495,5 +3565,17 @@ ol li {
   height: 0px;
   -webkit-animation-duration: 10s;
           animation-duration: 10s;
+}
+
+.typo {
+  padding: 200px 0 100px 0;
+}
+
+.typo .para {
+  max-width: 500px;
+}
+
+.secondary {
+  color: #FF5134;
 }
 /*# sourceMappingURL=style.css.map */

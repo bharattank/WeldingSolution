@@ -44,6 +44,9 @@ ul li,
 ol li {
     list-style-type: none;
 }
+p {
+    font-family: $font-family-open-sons;
+}
 .hover__image {
     overflow: hidden;
     img {
@@ -68,6 +71,43 @@ ol li {
     left: 0;
     background-color: $secondary_color;
     opacity: 0.8;
+}
+// Welding List
+.welding__list {
+    li {
+        list-style-type: none;
+        a {
+            font-size: 30px;
+            line-height: 55px;
+            color: $primary_color;
+            text-decoration: none;
+            display: inline-block;
+            padding-left: 15px;
+            position: relative;
+            &::before {
+                content: '';
+                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' width='30' height='30' viewBox='0 0 256 256' xml:space='preserve'%3E%3Cdesc%3ECreated with Fabric.js 1.7.22%3C/desc%3E%3Cdefs%3E%3C/defs%3E%3Cg transform='translate(128 128) scale(0.72 0.72)' style=''%3E%3Cg style='stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;' transform='translate(-175.05 -175.05000000000004) scale(3.89 3.89)'%3E%3Cpath d='M 31.63 79.75 c -0.009 0 -0.017 0 -0.026 0 c -1.156 -0.008 -2.251 -0.515 -3.005 -1.39 L 0.969 46.273 c -1.441 -1.674 -1.253 -4.2 0.421 -5.642 c 1.673 -1.442 4.199 -1.253 5.641 0.421 L 31.67 69.666 l 51.333 -58.065 c 1.464 -1.655 3.991 -1.811 5.646 -0.347 c 1.655 1.463 1.811 3.991 0.348 5.646 l -54.37 61.5 C 33.868 79.259 32.776 79.75 31.63 79.75 z' style='stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(255,81,52); fill-rule: nonzero; opacity: 1;' transform=' matrix(1 0 0 1 0 0) ' stroke-linecap='round'%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+                height: 30px;
+                width: 30px;
+                display: block;
+                background-repeat: no-repeat;
+                position: absolute;
+                top: 12px;
+                left: -30px;
+            }
+        }
+    }
+}
+.welding__list {
+    &.small__list {
+        li {
+            a {
+                &::before {
+                    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' width='22' height='16' viewBox='0 0 256 256' xml:space='preserve'%3E%3Cdesc%3ECreated with Fabric.js 1.7.22%3C/desc%3E%3Cdefs%3E%3C/defs%3E%3Cg transform='translate(128 128) scale(0.72 0.72)' style=''%3E%3Cg style='stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;' transform='translate(-175.05 -175.05000000000004) scale(3.89 3.89)'%3E%3Cpath d='M 31.63 79.75 c -0.009 0 -0.017 0 -0.026 0 c -1.156 -0.008 -2.251 -0.515 -3.005 -1.39 L 0.969 46.273 c -1.441 -1.674 -1.253 -4.2 0.421 -5.642 c 1.673 -1.442 4.199 -1.253 5.641 0.421 L 31.67 69.666 l 51.333 -58.065 c 1.464 -1.655 3.991 -1.811 5.646 -0.347 c 1.655 1.463 1.811 3.991 0.348 5.646 l -54.37 61.5 C 33.868 79.259 32.776 79.75 31.63 79.75 z' style='stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(255,81,52); fill-rule: nonzero; opacity: 1;' transform=' matrix(1 0 0 1 0 0) ' stroke-linecap='round'%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+                }
+            }
+        }
+    }
 }
 
 // Header
@@ -122,7 +162,7 @@ ol li {
                         }
                     }
                     .dropdown-menu {
-                        background-color: $primary_color;
+                        background-color: $text_white;
                         padding: 20px 15px;
                         border: 0;
 
@@ -131,11 +171,13 @@ ol li {
                             .dropdown-item {
                                 font-size: 20px;
                                 padding: 0.25rem 0;
+                                color: $primary_color !important;
                                 &::before {
                                     content: unset;
                                 }
                                 &:hover {
-                                    background: transparent
+                                    background: transparent;
+                                    color: $secondary_color !important;
                                 }
                             }
                         }
@@ -948,7 +990,7 @@ ol li {
                     opacity: 0.7;
                 }
                 .box__inner_overlay {
-                    background-color: $secondary_color;
+                    background-color: $text_white;
                 }
                 // &:hover {
                 //     .box-inner-up {
@@ -1067,6 +1109,8 @@ ol li {
                     color: #212121;
                     text-decoration: none;
                     padding-left: 15px;
+                    position: relative;
+                    
                 }
             }
         }
@@ -1074,6 +1118,13 @@ ol li {
     .expect-right {
         padding: 45px;
         background-color: #F4F4F4;
+        .expect-rating {
+            svg {
+                .a {
+                    fill: $secondary_color;
+                }
+            }
+        }
         .other-heading {
             font-size: 34px;
             line-height: 30px;
@@ -1283,7 +1334,6 @@ ol li {
                 }
                 .card-list {
                     min-height: 230px;
-                    padding: 0;
                     margin-bottom: 15px;
                     li {
                         a {
@@ -1350,7 +1400,6 @@ ol li {
                     }
                     .card-list {
                         min-height: 230px;
-                        padding: 0;
                         margin-bottom: 15px;
                         li {
                             a {
@@ -1627,6 +1676,7 @@ ol li {
                     display: inline-block;
                     font-family: 'Open Sans';
                     word-break: break-word;
+                    max-width: 270px;
                 }
             }
         }
@@ -1892,7 +1942,8 @@ ol li {
     .professionals-down {
         background-color: $primary_color;
         // max-width: 1588px;
-        padding: 43px 76px;
+        padding: 100px 0;
+        margin-bottom: 200px;
         .professionals-down-inner{
             .ws-description {
                 font-size: 82px;
@@ -1926,6 +1977,7 @@ ol li {
             }
         }
         .professionals-down {
+            margin-bottom: 100px;
             .professionals-down-inner{
                 .ws-description {
                     font-size: 60px;
@@ -1959,6 +2011,9 @@ ol li {
             }
         }
     }
+    .professionals-down {
+        margin-bottom: 50px;
+    }
 }
 @media screen and (max-width: 480px) {
     .professionals-welding {
@@ -1977,6 +2032,7 @@ ol li {
         }
         .professionals-down {
             padding: 30px 30px;
+            margin-bottom: 30px;
             .professionals-down-inner{
                 .ws-description {
                     font-size: 40px;
@@ -1989,6 +2045,11 @@ ol li {
             }
         }
     }   
+}
+.about-us {
+    .professionals-down {
+        margin-bottom: 0;
+    }
 }
 // <!-- We Inform --> 
 .we-inform-bg {
@@ -2096,6 +2157,12 @@ ol li {
                 font-weight: bold;
                 @include Welding-btn;
             }
+        }
+    }
+    .why-hire-left {
+        border-radius: 50%;
+        img {
+            border-radius: 50%;
         }
     }
 }
@@ -2307,6 +2374,8 @@ ol li {
                     color: $primary_color;
                     text-decoration: none;
                     display: inline-block;
+                    padding-left: 15px;
+                    position: relative;
                     &::after {
                         content: "";
                         display: block;
@@ -3204,7 +3273,7 @@ ol li {
                 }
             }
             .text {
-                font-size: 16px;
+                font-size: 20px;
                 line-height: 26px;
                 font-weight: 400;
                 color: #212121;
@@ -3214,8 +3283,16 @@ ol li {
             }
         }
         .accordion {
-            border: 1px solid darkgray;
+            border: 1px solid rgba(0,0,0,.1);
             margin-bottom: 30px;
+        }
+        .accordion-button {
+            font-size: 22px;
+        }
+        .accordion-collapse {
+            .accordion-body  {
+                color: $primary_color;
+            }
         }
         .accordion-button:focus {
             border-color: 0;
@@ -3381,4 +3458,15 @@ $orange: #D65A31;
       }
     }
   }
+}
+
+// Typography
+.typo {
+    padding: 200px 0 100px 0;
+    .para {
+        max-width: 500px;
+    }
+}
+.secondary {
+    color: $secondary_color;
 }
