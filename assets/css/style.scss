@@ -64,14 +64,6 @@ p {
     background-color: $primary_color;
     opacity: 0.9;
 }
-.contact__overlay {
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-color: $secondary_color;
-    opacity: 0.8;
-}
 .logo__small_secondary {
     fill: $secondary_color;
 }
@@ -1544,14 +1536,14 @@ p {
         .other-heding {
             font-size: 55px;
             line-height: 66px;
-            color: $text_white;
+            color: $primary_color;
             margin: 50px 0;
             max-width: 800px;
         }
         .ws-description {
             font-size: 35px;
             line-height: 45px;
-            color: $text_white;
+            color: $secondary_color;
             max-width: 630px;
         }
     }

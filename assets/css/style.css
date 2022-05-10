@@ -56,15 +56,6 @@ p {
   opacity: 0.9;
 }
 
-.contact__overlay {
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-color: #FF5134;
-  opacity: 0.8;
-}
-
 .logo__small_secondary {
   fill: #FF5134;
 }
@@ -1565,7 +1556,7 @@ p {
 .production--process .production--process__left .other-heding {
   font-size: 55px;
   line-height: 66px;
-  color: #fff;
+  color: #002639;
   margin: 50px 0;
   max-width: 800px;
 }
@@ -1573,7 +1564,7 @@ p {
 .production--process .production--process__left .ws-description {
   font-size: 35px;
   line-height: 45px;
-  color: #fff;
+  color: #FF5134;
   max-width: 630px;
 }
 
