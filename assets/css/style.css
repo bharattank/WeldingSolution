@@ -12,22 +12,12 @@ body {
   font-family: "Exo";
 }
 
-.container {
-  max-width: 1450px;
-}
-
 .exo {
   font-family: "Exo";
 }
 
 .sans {
   font-family: "Open Sans";
-}
-
-.footer-container {
-  max-width: 1657px;
-  margin: auto;
-  padding: 0 15px;
 }
 
 a {
@@ -295,12 +285,21 @@ p {
   transition: all .5s ease;
 }
 
-@media screen and (min-width: 992px) and (max-width: 1130px) {
+@media screen and (max-width: 1399px) and (min-width: 992px) {
+  .header-main .ws-header .ws-hero-button a {
+    padding: 14px 40px !important;
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
   .header-main .ws-header .ws-hero-inner-main ul {
     margin: 0;
   }
   .header-main .ws-header .ws-hero-inner-main ul li {
-    padding: 0 8px;
+    padding: 0 15px;
+  }
+  .header-main .ws-header .ws-hero-inner-main ul li a {
+    font-size: 25px;
   }
 }
 
@@ -669,6 +668,29 @@ p {
 
 .help-business .business-right-box .help-box-four:hover {
   background-position: 60px 30px;
+}
+
+@media screen and (max-width: 1399px) and (min-width: 992px) {
+  .help-business {
+    padding: 122px 0 160px 0;
+  }
+  .help-business .help-business-logo {
+    padding-bottom: 30px;
+  }
+  .help-business .help-business-content {
+    padding-right: 40px;
+  }
+  .help-business .help-business-content .other-heading {
+    font-size: 80px;
+    line-height: 95px;
+  }
+  .help-business .help-business-content .ws-description {
+    font-size: 30px;
+    line-height: 43px;
+  }
+  .help-business .business-right-box .help-business-box {
+    padding: 30px 5px 30px 15px;
+  }
 }
 
 @media screen and (max-width: 991px) {
@@ -1142,6 +1164,12 @@ p {
     font-size: 33px;
     line-height: 40px;
   }
+  .welding-type .welding-type-inner-main .welding-type-inner-bottom {
+    bottom: 0;
+  }
+  .welding-type .welding-type-inner-main .welding-type-inner-bottom .welding-type-box .box-inner-down a {
+    font-size: 28px;
+  }
 }
 
 .can-expect {
@@ -1205,18 +1233,18 @@ p {
   margin-right: 15px;
 }
 
-@media screen and (max-width: 991px) {
+@media screen and (min-width: 992px) and (max-width: 1199px) {
   .can-expect {
-    padding: 50px 0 60px 0;
+    padding: 230px 0 40px 0;
   }
   .can-expect .can-expect-left .other-heading {
-    font-size: 60px;
-    line-height: 70px;
+    font-size: 70px;
+    line-height: 85px;
   }
   .can-expect .can-expect-left .ws-description {
-    font-size: 20px;
-    line-height: 28px;
-    margin: 20px 0 30px 0;
+    font-size: 30px;
+    line-height: 42px;
+    margin: 30px 0 20px 0;
   }
 }
 
@@ -1228,6 +1256,9 @@ p {
     font-size: 40px;
     line-height: 50px;
   }
+  .can-expect .can-expect-left .expect-list {
+    margin-bottom: 40px;
+  }
   .can-expect .can-expect-left .expect-list li a {
     font-size: 20px;
     line-height: 35px;
@@ -1238,6 +1269,11 @@ p {
   .can-expect .can-expect-left .other-heading {
     font-size: 33px;
     line-height: 40px;
+  }
+  .can-expect .can-expect-left .ws-description {
+    font-size: 22px;
+    line-height: 32px;
+    margin: 20px 0 30px 0;
   }
   .can-expect .can-expect-left .expect-list li a {
     font-size: 20px;
@@ -1253,7 +1289,7 @@ p {
 }
 
 .other-service {
-  padding: 90px 0 200px 0;
+  padding: 90px 0 100px 0;
 }
 
 .other-service .other-service-bg {
@@ -1309,6 +1345,26 @@ p {
   width: 100%;
   height: 3px;
   background: #FF5134;
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  .other-service {
+    padding: 50px;
+  }
+  .other-service .other-service-bg {
+    padding: 50px 0;
+  }
+  .other-service .other-service-bg .other-service-left {
+    left: -50px;
+    top: 50;
+  }
+  .other-service .other-service-bg .other-service-right {
+    padding-top: 70px;
+  }
+  .other-service .other-service-bg .other-service-right .other-heading {
+    font-size: 80px;
+    line-height: 80px;
+  }
 }
 
 @media screen and (max-width: 991px) {
@@ -1696,7 +1752,7 @@ p {
 }
 
 .ws-main--footer .footer--content .other-heading {
-  font-size: 40px;
+  font-size: 38px;
   line-height: 100px;
   color: #fff;
 }
@@ -1792,12 +1848,12 @@ p {
   transition: all 300ms ease;
 }
 
-@media screen and (max-width: 1370px) and (min-width: 992px) {
+@media screen and (max-width: 1399px) and (min-width: 992px) {
   .ws-main--footer .footer--content {
     padding-top: 30px;
   }
   .ws-main--footer .footer--content .other-heading {
-    font-size: 28px;
+    font-size: 27px;
     line-height: 50px;
   }
 }
@@ -1878,6 +1934,7 @@ p {
   line-height: 46px;
   color: #212121;
   max-width: 600px;
+  padding-right: 15px;
 }
 
 .other-service-welding .other-service-bg-welding .can-expect-left-welding .expect-list li a {
@@ -2241,6 +2298,17 @@ p {
   border-radius: 50%;
 }
 
+@media screen and (min-width: 991px) and (max-width: 1399px) {
+  .why-hire {
+    padding: 50px 0 100px;
+  }
+  .why-hire .why-hire-right .other-heading {
+    font-size: 70px;
+    line-height: 70px;
+    margin-bottom: 20px;
+  }
+}
+
 @media screen and (max-width: 991px) {
   .why-hire {
     padding: 50px 0;
@@ -2265,7 +2333,7 @@ p {
 
 @media screen and (max-width: 767px) {
   .why-hire {
-    padding: 30px 0;
+    padding: 70px 0;
   }
   .why-hire .why-hire-right .other-heading {
     font-size: 40px;
@@ -2332,7 +2400,7 @@ p {
 
 @media screen and (max-width: 767px) {
   .can-expect-welding {
-    padding: 100px 0 50px 0;
+    padding: 50px 0;
   }
   .tools {
     padding: 0;
@@ -2443,6 +2511,22 @@ p {
   position: relative;
 }
 
+@media screen and (min-width: 992px) and (max-width: 1399px) {
+  .process-jobs {
+    padding: 100px 0;
+  }
+  .process-jobs .process-jobs-right .other-heading {
+    font-size: 60px;
+    line-height: 70px;
+    margin-bottom: 20px;
+  }
+  .process-jobs .process-jobs-right .ws-description {
+    font-size: 25px;
+    line-height: 35px;
+    margin-bottom: 20px;
+  }
+}
+
 @media screen and (max-width: 991px) {
   .process-jobs {
     padding: 50px 0;
@@ -2453,6 +2537,7 @@ p {
   .process-jobs .process-jobs-right .other-heading {
     font-size: 60px;
     line-height: 70px;
+    margin: 30px 0 10px;
   }
   .process-jobs .process-jobs-right .ws-description {
     font-size: 25px;
@@ -2520,6 +2605,7 @@ p {
   line-height: 41px;
   color: #6F6F6F;
   max-width: 637px;
+  padding: 0 15px;
 }
 
 .also-like .also-like-main .also-like-down {
@@ -2634,7 +2720,7 @@ p {
 
 @media screen and (max-width: 1400px) {
   .also-like {
-    padding: 100px 0 100px 0;
+    padding: 150px 0 100px 0;
   }
   .also-like .also-like-main .also-like-down {
     -ms-flex-wrap: wrap;
@@ -3078,6 +3164,14 @@ p {
   transition: .5s;
 }
 
+.blog__content .blog__content_inner-main .ws__blog_left .content .post__meta a svg {
+  margin-bottom: 6px;
+}
+
+.blog__content .blog__content_inner-main .ws__blog_left .content .post__meta a svg .s0 {
+  fill: #002639;
+}
+
 .blog__content .blog__content_inner-main .ws__blog_left .content .ws__post_title {
   position: relative;
   font-size: 40px;
@@ -3271,7 +3365,7 @@ p {
 
 @media screen and (max-width: 991px) {
   .blog__content {
-    padding: 0;
+    padding: 50px 0;
   }
 }
 
@@ -3314,7 +3408,8 @@ p {
   font-size: 34px;
   font-weight: 900;
   text-transform: uppercase;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
+  margin-top: 20px;
 }
 
 .ws-services .ws-services__inner-main .ws-services__left .title a {
@@ -3343,6 +3438,7 @@ p {
 .ws-services .ws-services__inner-main .accordion-collapse .accordion-body {
   color: #002639;
   font-size: 18px;
+  padding: 0 1.25rem;
 }
 
 .ws-services .ws-services__inner-main .accordion-button:focus {
@@ -3354,6 +3450,8 @@ p {
 .ws-services .ws-services__inner-main .accordion-button:not(.collapsed) {
   color: #FF5134;
   background-color: transparent;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 .ws-services .ws-services__inner-main .ws-services__right .ws-services__menu {
@@ -3455,7 +3553,6 @@ p {
   }
   .ws-services .ws-services__inner-main .ws-services__left .title {
     font-size: 30px;
-    margin-bottom: 20px;
   }
 }
 

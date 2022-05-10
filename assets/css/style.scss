@@ -23,20 +23,20 @@ $font-family-open-sons : 'Open Sans';
 body {
     font-family: $font-family-exo ;
 }
-.container {
-    max-width: 1450px;
-}
+// .container {
+//     max-width: 1450px;
+// }
 .exo {
     font-family: $font-family-exo ;
 }
 .sans {
     font-family: $font-family-open-sons ;
 }
-.footer-container {
-    max-width: 1657px;
-    margin: auto;
-    padding: 0 15px;
-}
+// .footer-container {
+//     max-width: 1657px;
+//     margin: auto;
+//     padding: 0 15px;
+// }
 a {
     text-decoration: none;
 }
@@ -258,14 +258,30 @@ p {
     animation: slide-in 500ms ease-out;
     transition: all .5s ease;
 }
-@media screen and (min-width: 992px) and (max-width: 1130px) {
+
+@media screen and (max-width:1399px) and (min-width:992px) {
+    .header-main {
+        .ws-header {
+            .ws-hero-button {
+                a {
+                    padding: 14px 40px !important;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
     .header-main {
         .ws-header {
             .ws-hero-inner-main {
                 ul {
                     margin: 0;
                     li{
-                        padding: 0 8px;
+                        padding: 0 15px;
+                        a {
+                            font-size: 25px;
+                        }
                     }
                 }
             }
@@ -600,7 +616,30 @@ p {
     }
 }
 // Business Help Media 
-
+@media screen and (max-width: 1399px) and (min-width: 992px) {
+    .help-business {
+        padding: 122px 0 160px 0;
+        .help-business-logo {
+            padding-bottom: 30px;
+        }
+        .help-business-content {
+            padding-right:40px;
+            .other-heading {
+                font-size: 80px;
+                line-height: 95px;
+            }
+            .ws-description {
+                font-size: 30px;
+                line-height: 43px;
+            }
+        }
+        .business-right-box {
+            .help-business-box {
+                padding: 30px 5px 30px 15px;
+            }
+        }
+    }
+}
 @media screen and (max-width: 991px) {
     .help-business {
         padding: 50px 0 70px 0;
@@ -1005,19 +1044,6 @@ p {
                 .box__inner_overlay {
                     background-color: $text_white;
                 }
-                // &:hover {
-                //     .box-inner-up {
-                //         color: $text_white;
-                //     }
-                //     .box-inner-down { 
-                //         a {
-                //             color: $text_white;
-                //             svg {
-                //                 fill: $text_white;
-                //             }
-                //         }
-                //     }
-                // }
             }
             .welding-type-box-three {
                 background-image: url("../images/card__img_3.jpg");
@@ -1091,6 +1117,16 @@ p {
                     line-height: 40px;
                 }
             }
+            .welding-type-inner-bottom {
+                bottom: 0;
+                .welding-type-box {
+                    .box-inner-down {
+                        a {
+                            font-size: 28px;
+                        }
+                    }
+                }
+            }
         }
     }
 }
@@ -1157,18 +1193,18 @@ p {
         }
     }
 }
-@media screen and (max-width: 991px) {
+@media screen and (min-width:992px) and (max-width:1199px) {
     .can-expect {
-        padding: 50px 0 60px 0;
+        padding: 230px 0 40px 0;
         .can-expect-left {
             .other-heading {
-                font-size: 60px;
-                line-height: 70px;
+                font-size: 70px;
+                line-height: 85px;
             }
             .ws-description {
-                font-size: 20px;
-                line-height: 28px;
-                margin: 20px 0 30px 0;
+                font-size: 30px;
+                line-height: 42px;
+                margin: 30px 0 20px 0;
             }
         }
     }
@@ -1183,6 +1219,7 @@ p {
                 line-height: 50px;
             }
             .expect-list {
+                margin-bottom: 40px;
                 li {
                     a {
                         font-size: 20px;
@@ -1199,6 +1236,11 @@ p {
             .other-heading {
                 font-size: 33px;
                 line-height: 40px;
+            }
+            .ws-description {
+                font-size: 22px;
+                line-height: 32px;
+                margin: 20px 0 30px 0;
             }
             .expect-list {
                 li {
@@ -1221,7 +1263,7 @@ p {
 
 // <!-- Other services -->
 .other-service {
-    padding: 90px 0 200px 0;
+    padding: 90px 0 100px 0;
     .other-service-bg {
         background-image: url("../images/BG\ Otros\ Servicios.png");
         background-position: 0% 0%;
@@ -1264,6 +1306,26 @@ p {
                             background: $secondary_color;
                         }
                     }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 992px) and (max-width:1199px) {
+    .other-service {
+        padding: 50px;
+        .other-service-bg {
+            padding: 50px 0;
+            .other-service-left {
+                left: -50px;
+                top: 50;
+            }
+            .other-service-right {
+                padding-top: 70px;
+                .other-heading {
+                    font-size: 80px;
+                    line-height: 80px;
                 }
             }
         }
@@ -1647,7 +1709,7 @@ p {
     .footer--content {
         padding-top: 30px;
         .other-heading {
-            font-size: 40px;
+            font-size: 38px;
             line-height: 100px;
             color: $text_white;
         }
@@ -1721,12 +1783,12 @@ p {
         transition: all 300ms ease;
     }
 }
-@media screen and (max-width: 1370px) and (min-width:992px) {
+@media screen and (max-width: 1399px) and (min-width:992px) {
     .ws-main--footer {
         .footer--content {
             padding-top: 30px;
             .other-heading {
-                font-size: 28px;
+                font-size: 27px;
                 line-height: 50px;
             }
         }
@@ -1802,6 +1864,7 @@ p {
                 line-height: 46px;
                 color: #212121;
                 max-width: 600px;
+                padding-right: 15px;
             }
             .expect-list {
                 li {
@@ -2184,6 +2247,18 @@ p {
         }
     }
 }
+@media screen and (min-width: 991px) and (max-width: 1399px) {
+    .why-hire {
+        padding: 50px 0 100px;
+        .why-hire-right {
+            .other-heading {
+                font-size: 70px;
+                line-height: 70px;
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
 @media screen and (max-width: 991px) {
     .why-hire {
         padding: 50px 0;
@@ -2207,7 +2282,7 @@ p {
 }
 @media screen and (max-width: 767px) {
     .why-hire {
-        padding: 30px 0;
+        padding: 70px 0;
         .why-hire-right {
             .other-heading {
                 font-size: 40px;
@@ -2280,7 +2355,7 @@ p {
 }
 @media screen and (max-width: 767px) {
     .can-expect-welding {
-        padding: 100px 0 50px 0;
+        padding: 50px 0;
     }
     .tools {
         padding: 0;
@@ -2408,6 +2483,23 @@ p {
         }
     }
 }
+@media screen and (min-width: 992px) and (max-width:1399px) {
+    .process-jobs {
+        padding: 100px 0;
+        .process-jobs-right {
+            .other-heading {
+                font-size: 60px;
+                line-height: 70px;
+                margin-bottom: 20px;
+            }
+            .ws-description {
+                font-size: 25px;
+                line-height: 35px;
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
 @media screen and (max-width: 991px) {
     .process-jobs {
         padding: 50px 0;
@@ -2416,6 +2508,7 @@ p {
             .other-heading {
                 font-size: 60px;
                 line-height: 70px;
+                margin: 30px 0 10px;
             }
             .ws-description {
                 font-size: 25px;
@@ -2491,6 +2584,7 @@ p {
                 line-height: 41px;
                 color: #6F6F6F;
                 max-width: 637px;
+                padding: 0 15px;
             }
         }
         .also-like-down {
@@ -2597,7 +2691,7 @@ p {
 }
 @media screen and (max-width: 1400px) {
     .also-like {
-        padding: 100px 0 100px 0;
+        padding: 150px 0 100px 0;
         .also-like-main {
             .also-like-down {
                 flex-wrap: wrap;
@@ -3067,6 +3161,12 @@ p {
                         color: $secondary_color;
                         margin-right: 10px;
                         transition: .5s;
+                        svg {
+                            margin-bottom: 6px;
+                            .s0 {
+                                fill: $primary_color;
+                            }
+                        }
                     }
                 }
                 .ws__post_title {
@@ -3240,7 +3340,7 @@ p {
 }
 @media screen and (max-width: 991px) {
     .blog__content {
-        padding: 0;
+        padding: 50px 0;
     }
 }
 @media screen and (max-width: 480px) {
@@ -3291,7 +3391,8 @@ p {
                 font-size: 34px;
                 font-weight: 900;
                 text-transform: uppercase;
-                margin-bottom: 30px;
+                margin-bottom: 15px;
+                margin-top: 20px;
                 a {
                     color: $primary_color;
                 }
@@ -3317,6 +3418,7 @@ p {
             .accordion-body  {
                 color: $primary_color;
                 font-size: 18px;
+                padding: 0 1.25rem;
             }
         }
         .accordion-button:focus {
@@ -3326,6 +3428,7 @@ p {
         .accordion-button:not(.collapsed) {
             color: $secondary_color;
             background-color: transparent;
+            box-shadow: none;
         }
         .ws-services__right {
             .ws-services__menu {
@@ -3420,7 +3523,6 @@ p {
             .ws-services__left {
                 .title {
                     font-size: 30px;
-                    margin-bottom: 20px;
                 }
             }
         }
