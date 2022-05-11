@@ -121,4 +121,29 @@ jQuery(document).ready(function ($) {
         }
     }
 
+    /** Switcher */
+    document.querySelector('.svg__wrap').onclick = () => {
+        document.querySelector('#switcher').classList.toggle('active');
+    }
+
+    let colorButtons = document.querySelectorAll('.colorBotton');
+
+    colorButtons.forEach(color => {
+        color.addEventListener('click', () => {
+            let dataColor = color.getAttribute('data-color');
+            console.log(dataColor);
+            document.querySelector(':root').style.setProperty('--secondary_color', dataColor);
+        });
+    });
+
+    let colorButtonsp = document.querySelectorAll('.colorBottonp');
+
+    colorButtonsp.forEach(color => {
+        color.addEventListener('click', () => {
+            let dataColor = color.getAttribute('data-color');
+            console.log(dataColor);
+            document.querySelector(':root').style.setProperty('--primary_color', dataColor);
+        });
+    });
+
 });
