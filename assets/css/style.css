@@ -1544,6 +1544,14 @@ p {
   }
 }
 
+.contact-us .production--process .production--process__left .other-heding {
+  color: #002639;
+}
+
+.contact-us .production--process .production--process__left .ws-description {
+  color: #FF5134;
+}
+
 .production--process {
   background-image: url("../images/BG - Contacto.png");
   background-position: 0% 0%;
@@ -1556,7 +1564,7 @@ p {
 .production--process .production--process__left .other-heding {
   font-size: 55px;
   line-height: 66px;
-  color: #002639;
+  color: #fff;
   margin: 50px 0;
   max-width: 800px;
 }
@@ -1564,7 +1572,7 @@ p {
 .production--process .production--process__left .ws-description {
   font-size: 35px;
   line-height: 45px;
-  color: #FF5134;
+  color: #fff;
   max-width: 630px;
 }
 

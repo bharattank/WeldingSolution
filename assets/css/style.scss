@@ -1525,6 +1525,18 @@ p {
     }
 }
 // <!-- Production Process --> 
+.contact-us {
+    .production--process {
+        .production--process__left {
+            .other-heding {
+                color: $primary_color;
+            }
+            .ws-description {
+                color: $secondary_color;
+            }
+        }
+    }
+}
 .production--process {
     background-image: url("../images/BG\ -\ Contacto.png");
     background-position: 0% 0%;
@@ -1536,14 +1548,14 @@ p {
         .other-heding {
             font-size: 55px;
             line-height: 66px;
-            color: $primary_color;
+            color: $text_white;
             margin: 50px 0;
             max-width: 800px;
         }
         .ws-description {
             font-size: 35px;
             line-height: 45px;
-            color: $secondary_color;
+            color: $text_white;
             max-width: 630px;
         }
     }
