@@ -126,18 +126,27 @@ jQuery(document).ready(function ($) {
         document.querySelector('#switcher').classList.toggle('active');
     }
 
-    let colorButtons = document.querySelectorAll('.colorBotton');
+    $(".colorBottonp").click(function () {
+        $(".colorBottonp").removeClass("active");
+        // $(".tab").addClass("active"); // instead of this do the below 
+        $(this).addClass("active");   
+    });
 
+    $(".colorBotton").click(function () {
+        $(".colorBotton").removeClass("active");
+        // $(".tab").addClass("active"); // instead of this do the below 
+        $(this).addClass("active");   
+    });
+
+    let colorButtons = document.querySelectorAll('.colorBotton');
     colorButtons.forEach(color => {
         color.addEventListener('click', () => {
             let dataColor = color.getAttribute('data-color');
-            console.log(dataColor);
             document.querySelector(':root').style.setProperty('--secondary_color', dataColor);
         });
     });
 
     let colorButtonsp = document.querySelectorAll('.colorBottonp');
-
     colorButtonsp.forEach(color => {
         color.addEventListener('click', () => {
             let dataColor = color.getAttribute('data-color');
