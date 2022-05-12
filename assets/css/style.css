@@ -3902,4 +3902,61 @@ p {
     padding: 50px 0;
   }
 }
+
+.four_zero_four {
+  padding: 200px 0 100px 0;
+}
+
+.four_zero_four .four_zero_four_inner p {
+  font-size: 40px;
+  line-height: 50px;
+  color: var(--secondary_color);
+  margin-bottom: 30px;
+}
+
+.four_zero_four .four_zero_four_inner .title {
+  font-size: 200px;
+  color: var(--primary_color);
+  line-height: 200px;
+  margin-bottom: 50px;
+}
+
+.four_zero_four .four_zero_four_inner .back_to_home {
+  text-decoration: none;
+  color: #fff;
+  background-color: var(--secondary_color);
+  -webkit-box-shadow: 6px 6px 0px #FFCEC6;
+          box-shadow: 6px 6px 0px #FFCEC6;
+  -webkit-transition: 500ms all;
+  transition: 500ms all;
+  text-transform: uppercase;
+  padding: 17px 64px;
+  font-size: 22px;
+}
+
+.four_zero_four .four_zero_four_inner .back_to_home:hover {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  -webkit-transition: 500ms all;
+  transition: 500ms all;
+}
+
+@media screen and (max-width: 576px) {
+  .four_zero_four {
+    padding: 100px 0 50px;
+  }
+  .four_zero_four .four_zero_four_inner p {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  .four_zero_four .four_zero_four_inner .title {
+    font-size: 120px;
+    line-height: 140px;
+    margin-bottom: 20px;
+  }
+  .four_zero_four .four_zero_four_inner .back_to_home {
+    padding: 17px 30px;
+    font-size: 22px;
+  }
+}
 /*# sourceMappingURL=style.css.map */

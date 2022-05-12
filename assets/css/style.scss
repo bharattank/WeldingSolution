@@ -3813,3 +3813,47 @@ $orange: #D65A31;
         padding: 50px 0;
     }
 }
+
+// 404 Section 
+.four_zero_four {
+    padding: 200px 0 100px 0;
+    .four_zero_four_inner {
+        p {
+            font-size: 40px;
+            line-height: 50px;
+            color: $secondary_color;
+            margin-bottom: 30px;
+        }
+        .title {
+            font-size: 200px;
+            color: $primary_color;
+            line-height: 200px;
+            margin-bottom: 50px;
+        }
+        .back_to_home {
+            @include Welding-btn;
+            padding: 17px 64px;
+            font-size: 22px;
+        }
+    }
+}
+@media screen and (max-width: 576px) {
+    .four_zero_four {
+        padding: 100px 0 50px;
+        .four_zero_four_inner {
+            p {
+                font-size: 20px;
+                line-height: 24px;
+            }
+            .title {
+                font-size: 120px;
+                line-height: 140px;
+                margin-bottom: 20px;
+            }
+            .back_to_home {
+                padding: 17px 30px;
+                font-size: 22px;
+            }
+        }
+    }
+}
