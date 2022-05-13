@@ -150,8 +150,29 @@ jQuery(document).ready(function ($) {
     colorButtonsp.forEach(color => {
         color.addEventListener('click', () => {
             let dataColor = color.getAttribute('data-color');
-            console.log(dataColor);
             document.querySelector(':root').style.setProperty('--primary_color', dataColor);
+        });
+    });
+
+    /** Conver HEXA to RGBA */
+    let colorButtonShadow = document.querySelectorAll('.colorBotton');
+    colorButtonShadow.forEach(color => {
+        color.addEventListener('click', () => {
+            let dataColor = color.getAttribute('data-color');
+            function hexToRgbA(hex){
+                var c;
+                if(/^#([A-Fa-f0-9]{3}){1,2}$/.test(hex)){
+                    c= hex.substring(1).split('');
+                    if(c.length== 3){
+                        c= [c[0], c[0], c[1], c[1], c[2], c[2]];
+                    }
+                    c= '0x'+c.join('');
+                    return 'rgba('+[(c>>16)&255, (c>>8)&255, c&255].join(',')+',.6)';
+                }
+                throw new Error('Bad Hex');
+            }
+            let box_shadow = hexToRgbA(dataColor);
+            document.querySelector(':root').style.setProperty('--box_shadow', box_shadow);
         });
     });
 

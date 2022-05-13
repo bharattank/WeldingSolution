@@ -1,6 +1,7 @@
 :root {
   --primary_color: #002639;
   --secondary_color: #FF5134;
+  --box_shadow: #FFCEC6;
 }
 
 .welding__default_button {
@@ -198,11 +199,11 @@ p {
 }
 
 #switcher #switcher__color .switcher__colors li a.color2 {
-  background-color: #900c3f;
+  background-color: #F2AA4CFF;
 }
 
 #switcher #switcher__color .switcher__colors li a.color3 {
-  background-color: #c70039;
+  background-color: #006B38FF;
 }
 
 #switcher #switcher__color .switcher__colors li a.active {
@@ -214,11 +215,11 @@ p {
 }
 
 #switcher #switcher__color .switcher__colors.primary li a.colorp2 {
-  background-color: #000000;
+  background-color: #101820FF;
 }
 
 #switcher #switcher__color .switcher__colors.primary li a.colorp3 {
-  background-color: #444444;
+  background-color: #101820FF;
 }
 
 @media screen and (max-width: 576px) {
@@ -247,6 +248,11 @@ p {
   padding-bottom: 0;
   position: relative;
   z-index: 3;
+}
+
+.header-main .ws-header .ws-hero-inner-main .container-fluid {
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .header-main .ws-header .ws-hero-inner-main .ws-nav-menu {
@@ -418,7 +424,7 @@ p {
 
 @media screen and (max-width: 1399px) and (min-width: 992px) {
   .header-main .ws-header .ws-hero-button a {
-    padding: 14px 40px !important;
+    padding: 14px 30px !important;
   }
 }
 
@@ -607,6 +613,10 @@ p {
     width: 80px;
     height: 50px;
   }
+  .header-main .ws-header .ws-hero-inner-main .navbar-brand svg {
+    width: 80px;
+    height: 50px;
+  }
   .header-main .ws-header .ws-hero-inner-main ul {
     margin: 0;
   }
@@ -750,7 +760,7 @@ p {
 }
 
 .help-business .business-right-box .help-business-box {
-  padding: 45px 5px 30px 31px;
+  padding: 45px 15px 30px 31px;
   min-height: 320px;
   -webkit-transition: .5s all;
   transition: .5s all;
@@ -823,7 +833,7 @@ p {
     line-height: 43px;
   }
   .help-business .business-right-box .help-business-box {
-    padding: 30px 5px 30px 15px;
+    padding: 30px 15px;
   }
 }
 
@@ -890,7 +900,7 @@ p {
     margin-top: 25px;
   }
   .help-business .business-right-box .help-business-box {
-    padding: 20px 5px 10px 10px;
+    padding: 20px 10px 10px 10px;
     min-height: 200px;
   }
   .help-business .business-right-box .help-business-box .other-heading {
@@ -949,7 +959,7 @@ p {
     margin-top: 25px;
   }
   .help-business .business-right-box .help-business-box {
-    padding: 20px 5px 10px 10px;
+    padding: 20px 10px 10px 10px;
     min-height: 200px;
   }
   .help-business .business-right-box .help-business-box .other-heading {
