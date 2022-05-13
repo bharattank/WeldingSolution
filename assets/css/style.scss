@@ -20,9 +20,20 @@ $font-family-open-sons : 'Open Sans';
         transition: 500ms all;
     }
 }
-::selection {
-    background-color: $primary_color;
+.welding__default_button {
+    text-decoration: none;
     color: $text_white;
+    background-color: $secondary_color;
+    box-shadow: 6px 6px 0px #FFCEC6;
+    transition: 500ms all;
+    text-transform: uppercase;
+    padding: 17px 45px;
+    font-size: 25px;
+    &:hover {
+        box-shadow: none;
+        transition: 500ms all;
+        color: #fff;
+    }
 }
 body {
     font-family: $font-family-exo ;
@@ -701,7 +712,7 @@ p {
             padding: 45px 5px 30px 31px;
             min-height: 320px;
             transition: .5s all;
-            background-position: 60px 20px;
+            background-position: 80% 20px;
             background-repeat: no-repeat;
             .other-heading {
                 font-size: 34px;
@@ -716,7 +727,7 @@ p {
                 transition: 0.5s all;
             }
             &:hover {
-                background-position: 60px 30px;
+                background-position: 80% 30px;
             }
         }
         .help-box-one {
