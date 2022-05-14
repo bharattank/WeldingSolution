@@ -1,3 +1,8 @@
+/** If you change Primary and Secondary color default set variation below.
+*   Default -  --primary_color: #002639; and --secondary_color: #FF5134; 
+*   2nd     -  --primary_color: #101820; and --secondary_color: #F2AA4C;
+*   3rd     -  --primary_color: #101820; and --secondary_color: #006B38;
+*/
 :root {
   --primary_color: #002639;
   --secondary_color: #FF5134;
@@ -207,7 +212,7 @@ p {
 }
 
 #switcher #switcher__color .switcher__colors li a.active {
-  border-radius: 14px;
+  border-radius: 50%;
 }
 
 #switcher #switcher__color .switcher__colors.primary li a.colorp1 {
@@ -314,6 +319,8 @@ p {
   background-color: #fff;
   padding: 20px;
   border: 0;
+  -webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
 }
 
 .header-main .ws-header .ws-hero-inner-main ul li .dropdown-menu li {
@@ -333,6 +340,11 @@ p {
 .header-main .ws-header .ws-hero-inner-main ul li .dropdown-menu li .dropdown-item:hover {
   background: transparent;
   color: var(--secondary_color) !important;
+}
+
+.header-main .ws-header .ws-hero-inner-main ul li .dropdown-menu li .dropdown-item.active {
+  color: var(--secondary_color) !important;
+  background-color: transparent !important;
 }
 
 .header-main .ws-header .ws-hero-inner-main .ws-hero-button a {
@@ -1953,6 +1965,14 @@ p {
 .ws-main--footer .footer--image {
   padding: 100px 0;
   background-color: var(--secondary_color);
+}
+
+.ws-main--footer .footer--image svg {
+  padding: 0 15px;
+}
+
+.ws-main--footer .footer--image svg .a {
+  fill: var(--primary_color);
 }
 
 .ws-main--footer .footer--content {

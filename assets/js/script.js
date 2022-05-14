@@ -16,17 +16,30 @@ jQuery(document).ready(function ($) {
         $('html, body').animate({ scrollTop: 0 }, '1000');
     });
 
-    /** Active Menu Color */
-    $(function(){
-        var current = location.pathname;
-        $('.nav-link').each(function(){
-            var $this = $(this);
-            // if the current path is like this link, make it active
-            if($this.attr('href').indexOf(current) !== -1){
-                $this.addClass('active');
-            }
-        })
-    })
+    /** Active Menu Color and Active Submenu*/
+    // $(function(){
+    //     $('.nav-link').each(function(){
+    //         var path = window.location.href; 
+    //         // because the 'href' property of the DOM element is the absolute path
+    //         $('.nav-link').each(function() {
+    //             if (this.href === path) {
+    //             $(this).addClass('active');
+    //             }
+    //         });
+    //     });
+    //     $('.dropdown-item').each(function(){
+    //         var path = window.location.href; 
+    //         // because the 'href' property of the DOM element is the absolute path
+    //         $('.dropdown-item').each(function() {
+    //             if (this.href === path) {
+    //                 $(this).addClass('active');
+    //                 if ( $(this).hasClass("active") ) {
+    //                     $(this).parent().parent().siblings().addClass('active')
+    //                 }
+    //             }
+    //         });
+    //     });
+    // });
 
     /** Slick Slider */
     $('.company__logo_slide__main').slick({
