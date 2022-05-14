@@ -170,30 +170,30 @@ p {
   text-align: center;
 }
 
-#switcher #switcher__color {
+#switcher .switcher__color {
   padding: 20px 20px 0;
 }
 
-#switcher #switcher__color p {
+#switcher .switcher__color p {
   font-size: 18px;
   font-weight: 700;
   line-height: 1;
   margin: 0 0 10px;
 }
 
-#switcher #switcher__color .switcher__colors {
+#switcher .switcher__color .switcher__colors {
   margin-bottom: 45px;
   line-height: 0;
   padding-left: 0;
 }
 
-#switcher #switcher__color .switcher__colors li {
+#switcher .switcher__color .switcher__colors li {
   float: left;
   margin-bottom: 0;
   padding: 0 4px 5px 4px;
 }
 
-#switcher #switcher__color .switcher__colors li a {
+#switcher .switcher__color .switcher__colors li a {
   background-color: #FF5134;
   display: inline-block;
   height: 40px;
@@ -203,27 +203,27 @@ p {
   border-radius: 14px 0;
 }
 
-#switcher #switcher__color .switcher__colors li a.color2 {
+#switcher .switcher__color .switcher__colors li a.color2 {
   background-color: #F2AA4CFF;
 }
 
-#switcher #switcher__color .switcher__colors li a.color3 {
+#switcher .switcher__color .switcher__colors li a.color3 {
   background-color: #006B38FF;
 }
 
-#switcher #switcher__color .switcher__colors li a.active {
+#switcher .switcher__color .switcher__colors li a.active {
   border-radius: 50%;
 }
 
-#switcher #switcher__color .switcher__colors.primary li a.colorp1 {
+#switcher .switcher__color .switcher__colors.primary li a.colorp1 {
   background-color: #002639;
 }
 
-#switcher #switcher__color .switcher__colors.primary li a.colorp2 {
+#switcher .switcher__color .switcher__colors.primary li a.colorp2 {
   background-color: #101820FF;
 }
 
-#switcher #switcher__color .switcher__colors.primary li a.colorp3 {
+#switcher .switcher__color .switcher__colors.primary li a.colorp3 {
   background-color: #101820FF;
 }
 

@@ -167,7 +167,7 @@ jQuery(document).ready(function ($) {
     colorButtons.forEach(color => {
         color.addEventListener('click', () => {
             let dataColor = color.getAttribute('data-color');
-            let shadowColor = color.getAttribute('shadow');
+            let shadowColor = color.getAttribute('data-shadow');
             document.querySelector(':root').style.setProperty('--secondary_color', dataColor);
             document.querySelector(':root').style.setProperty('--box_shadow', shadowColor);
         });
