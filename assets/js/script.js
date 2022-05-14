@@ -17,29 +17,29 @@ jQuery(document).ready(function ($) {
     });
 
     /** Active Menu Color and Active Submenu*/
-    // $(function(){
-    //     $('.nav-link').each(function(){
-    //         var path = window.location.href; 
-    //         // because the 'href' property of the DOM element is the absolute path
-    //         $('.nav-link').each(function() {
-    //             if (this.href === path) {
-    //             $(this).addClass('active');
-    //             }
-    //         });
-    //     });
-    //     $('.dropdown-item').each(function(){
-    //         var path = window.location.href; 
-    //         // because the 'href' property of the DOM element is the absolute path
-    //         $('.dropdown-item').each(function() {
-    //             if (this.href === path) {
-    //                 $(this).addClass('active');
-    //                 if ( $(this).hasClass("active") ) {
-    //                     $(this).parent().parent().siblings().addClass('active')
-    //                 }
-    //             }
-    //         });
-    //     });
-    // });
+    $(function(){
+        $('.nav-link').each(function(){
+            var path = window.location.href; 
+            // because the 'href' property of the DOM element is the absolute path
+            $('.nav-link').each(function() {
+                if (this.href === path) {
+                $(this).addClass('active');
+                }
+            });
+        });
+        $('.dropdown-item').each(function(){
+            var path = window.location.href; 
+            // because the 'href' property of the DOM element is the absolute path
+            $('.dropdown-item').each(function() {
+                if (this.href === path) {
+                    $(this).addClass('active');
+                    if ( $(this).hasClass("active") ) {
+                        $(this).parent().parent().siblings().addClass('active')
+                    }
+                }
+            });
+        });
+    });
 
     /** Slick Slider */
     $('.company__logo_slide__main').slick({
