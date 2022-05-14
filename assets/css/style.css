@@ -306,6 +306,10 @@ p {
   background: transparent;
 }
 
+.header-main .ws-header .ws-hero-inner-main ul li a.active {
+  color: var(--secondary_color) !important;
+}
+
 .header-main .ws-header .ws-hero-inner-main ul li .dropdown-menu {
   background-color: #fff;
   padding: 20px;
@@ -335,8 +339,8 @@ p {
   text-decoration: none;
   color: #fff;
   background-color: var(--secondary_color);
-  -webkit-box-shadow: 6px 6px 0px #FFCEC6;
-          box-shadow: 6px 6px 0px #FFCEC6;
+  -webkit-box-shadow: 6px 6px 0px var(--box_shadow);
+          box-shadow: 6px 6px 0px var(--box_shadow);
   -webkit-transition: 500ms all;
   transition: 500ms all;
   text-transform: uppercase;
@@ -390,8 +394,8 @@ p {
   text-decoration: none;
   color: #fff;
   background-color: var(--secondary_color);
-  -webkit-box-shadow: 6px 6px 0px #FFCEC6;
-          box-shadow: 6px 6px 0px #FFCEC6;
+  -webkit-box-shadow: 6px 6px 0px var(--box_shadow);
+          box-shadow: 6px 6px 0px var(--box_shadow);
   -webkit-transition: 500ms all;
   transition: 500ms all;
   text-transform: uppercase;
@@ -628,8 +632,8 @@ p {
     text-decoration: none;
     color: #fff;
     background-color: var(--secondary_color);
-    -webkit-box-shadow: 6px 6px 0px #FFCEC6;
-            box-shadow: 6px 6px 0px #FFCEC6;
+    -webkit-box-shadow: 6px 6px 0px var(--box_shadow);
+            box-shadow: 6px 6px 0px var(--box_shadow);
     -webkit-transition: 500ms all;
     transition: 500ms all;
     text-transform: uppercase;
@@ -735,8 +739,8 @@ p {
   text-decoration: none;
   color: #fff;
   background-color: var(--secondary_color);
-  -webkit-box-shadow: 6px 6px 0px #FFCEC6;
-          box-shadow: 6px 6px 0px #FFCEC6;
+  -webkit-box-shadow: 6px 6px 0px var(--box_shadow);
+          box-shadow: 6px 6px 0px var(--box_shadow);
   -webkit-transition: 500ms all;
   transition: 500ms all;
   text-transform: uppercase;
@@ -1731,6 +1735,16 @@ p {
   color: var(--secondary_color);
 }
 
+.contact-us .contact_map_wrap {
+  height: 500px;
+}
+
+@media screen and (max-width: 991px) {
+  .contact-us .contact_map_wrap {
+    height: 300px;
+  }
+}
+
 .production--process {
   background-image: url("../images/contact_bg.jpg");
   background-position: 0% 0%;
@@ -1786,8 +1800,8 @@ p {
   text-decoration: none;
   color: #fff;
   background-color: var(--secondary_color);
-  -webkit-box-shadow: 6px 6px 0px #FFCEC6;
-          box-shadow: 6px 6px 0px #FFCEC6;
+  -webkit-box-shadow: 6px 6px 0px var(--box_shadow);
+          box-shadow: 6px 6px 0px var(--box_shadow);
   -webkit-transition: 500ms all;
   transition: 500ms all;
   text-transform: uppercase;
@@ -1874,8 +1888,8 @@ p {
   text-decoration: none;
   color: #fff;
   background-color: var(--secondary_color);
-  -webkit-box-shadow: 6px 6px 0px #FFCEC6;
-          box-shadow: 6px 6px 0px #FFCEC6;
+  -webkit-box-shadow: 6px 6px 0px var(--box_shadow);
+          box-shadow: 6px 6px 0px var(--box_shadow);
   -webkit-transition: 500ms all;
   transition: 500ms all;
   text-transform: uppercase;
@@ -2478,8 +2492,8 @@ p {
   text-decoration: none;
   color: #fff;
   background-color: var(--secondary_color);
-  -webkit-box-shadow: 6px 6px 0px #FFCEC6;
-          box-shadow: 6px 6px 0px #FFCEC6;
+  -webkit-box-shadow: 6px 6px 0px var(--box_shadow);
+          box-shadow: 6px 6px 0px var(--box_shadow);
   -webkit-transition: 500ms all;
   transition: 500ms all;
   text-transform: uppercase;
@@ -2866,6 +2880,10 @@ p {
   color: #212121;
 }
 
+.also-like .also-like-main .also-like-down .also-like-down-inner .also-like-down-inner-content .box-inner-down a svg path {
+  fill: var(--secondary_color) !important;
+}
+
 .also-like .also-like-main .also-like-down .also-like-down-inner .also-like-down-inner-content .overlay-main {
   background-color: var(--secondary_color);
   left: 0;
@@ -3222,8 +3240,8 @@ p {
   text-decoration: none;
   color: #fff;
   background-color: var(--secondary_color);
-  -webkit-box-shadow: 6px 6px 0px #FFCEC6;
-          box-shadow: 6px 6px 0px #FFCEC6;
+  -webkit-box-shadow: 6px 6px 0px var(--box_shadow);
+          box-shadow: 6px 6px 0px var(--box_shadow);
   -webkit-transition: 500ms all;
   transition: 500ms all;
   text-transform: uppercase;
@@ -3946,8 +3964,8 @@ p {
   text-decoration: none;
   color: #fff;
   background-color: var(--secondary_color);
-  -webkit-box-shadow: 6px 6px 0px #FFCEC6;
-          box-shadow: 6px 6px 0px #FFCEC6;
+  -webkit-box-shadow: 6px 6px 0px var(--box_shadow);
+          box-shadow: 6px 6px 0px var(--box_shadow);
   -webkit-transition: 500ms all;
   transition: 500ms all;
   text-transform: uppercase;

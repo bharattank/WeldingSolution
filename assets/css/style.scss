@@ -13,7 +13,7 @@ $font-family-open-sons : 'Open Sans';
     text-decoration: none;
     color: $text_white;
     background-color: $secondary_color;
-    box-shadow: 6px 6px 0px #FFCEC6;
+    box-shadow: 6px 6px 0px var(--box_shadow);
     transition: 500ms all;
     text-transform: uppercase;
     &:hover {
@@ -307,6 +307,9 @@ p {
                             width: 60px;
                             height: 7px;
                             background: transparent;
+                        }
+                        &.active {
+                            color: $secondary_color !important;
                         }
                     }
                     .dropdown-menu {
@@ -1725,6 +1728,16 @@ p {
             }
         }
     }
+    .contact_map_wrap {
+        height: 500px;
+    }
+}
+@media screen and (max-width: 991px) {
+    .contact-us {
+        .contact_map_wrap {
+            height: 300px;
+        }
+    }
 }
 .production--process {
     background-image: url("../images/contact_bg.jpg");
@@ -2841,6 +2854,11 @@ p {
                         a {
                             text-decoration: none;
                             color:  #212121;
+                            svg {
+                                path {
+                                    fill: $secondary_color !important;
+                                }
+                            }
                         }
                     }
                     .overlay-main {

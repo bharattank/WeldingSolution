@@ -16,6 +16,18 @@ jQuery(document).ready(function ($) {
         $('html, body').animate({ scrollTop: 0 }, '1000');
     });
 
+    /** Active Menu Color */
+    $(function(){
+        var current = location.pathname;
+        $('.nav-link').each(function(){
+            var $this = $(this);
+            // if the current path is like this link, make it active
+            if($this.attr('href').indexOf(current) !== -1){
+                $this.addClass('active');
+            }
+        })
+    })
+
     /** Slick Slider */
     $('.company__logo_slide__main').slick({
         infinite: true,
@@ -142,7 +154,9 @@ jQuery(document).ready(function ($) {
     colorButtons.forEach(color => {
         color.addEventListener('click', () => {
             let dataColor = color.getAttribute('data-color');
+            let shadowColor = color.getAttribute('shadow');
             document.querySelector(':root').style.setProperty('--secondary_color', dataColor);
+            document.querySelector(':root').style.setProperty('--box_shadow', shadowColor);
         });
     });
 
@@ -155,25 +169,24 @@ jQuery(document).ready(function ($) {
     });
 
     /** Conver HEXA to RGBA */
-    let colorButtonShadow = document.querySelectorAll('.colorBotton');
-    colorButtonShadow.forEach(color => {
-        color.addEventListener('click', () => {
-            let dataColor = color.getAttribute('data-color');
-            function hexToRgbA(hex){
-                var c;
-                if(/^#([A-Fa-f0-9]{3}){1,2}$/.test(hex)){
-                    c= hex.substring(1).split('');
-                    if(c.length== 3){
-                        c= [c[0], c[0], c[1], c[1], c[2], c[2]];
-                    }
-                    c= '0x'+c.join('');
-                    return 'rgba('+[(c>>16)&255, (c>>8)&255, c&255].join(',')+',.6)';
-                }
-                throw new Error('Bad Hex');
-            }
-            let box_shadow = hexToRgbA(dataColor);
-            document.querySelector(':root').style.setProperty('--box_shadow', box_shadow);
-        });
-    });
-
+    // let colorButtonShadow = document.querySelectorAll('.colorBotton');
+    // colorButtonShadow.forEach(color => {
+    //     color.addEventListener('click', () => {
+    //         let dataColor = color.getAttribute('data-color');
+    //         function hexToRgbA(hex){
+    //             var c;
+    //             if(/^#([A-Fa-f0-9]{3}){1,2}$/.test(hex)){
+    //                 c= hex.substring(1).split('');
+    //                 if(c.length== 3){
+    //                     c= [c[0], c[0], c[1], c[1], c[2], c[2]];
+    //                 }
+    //                 c= '0x'+c.join('');
+    //                 return 'rgba('+[(c>>16)&255, (c>>8)&255, c&255].join(',')+',.6)';
+    //             }
+    //             throw new Error('Bad Hex');
+    //         }
+    //         let box_shadow = hexToRgbA(dataColor);
+    //         document.querySelector(':root').style.setProperty('--box_shadow', box_shadow);
+    //     });
+    // });
 });
