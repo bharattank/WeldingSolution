@@ -3449,10 +3449,22 @@ p {
         .ws__blog_right {
             .widget {
                 margin-bottom: 40px;
+                padding: 25px;
+                background: #f9f8f7;
+                .widget-title {
+                    position: relative;
+                    font-size: 18px;
+                    font-weight: 700;
+                    display: inline-block;
+                    padding: 5.5px 17px;
+                    color: $secondary_color;
+                    text-transform: capitalize;
+                    border: 3px solid $secondary_color;
+                    margin-bottom: 30px;
+                }
             }
             .search__box {
                 background-color: $secondary_color;
-                padding: 25px;
                 .form-group {
                     position: relative;
                     input {
@@ -3489,9 +3501,8 @@ p {
                 }
             }
             .ws__recent_post {
-                padding: 25px;
                 background: #f9f8f7;
-                .widget_title {
+                .widget-title {
                     position: relative;
                     font-size: 18px;
                     font-weight: 700;
@@ -3546,6 +3557,55 @@ p {
                     }
                 }
             }
+            .widget_categories {
+                ul {
+                    margin: 0;
+                    padding: 0;
+                    .cat-item {
+                        padding-bottom: 15px;
+                        &:last-child {
+                            padding-bottom: 0;
+                        }
+                        a {
+                            color: $primary_color;
+                            display: inline-block;
+                            line-height: 26px;
+                            text-transform: uppercase;
+                            padding-right: 10px;
+                            transition: .5s all;
+                            &:hover {
+                                color: $secondary_color;
+                            }
+                        }
+                    }
+                }
+            }
+            .widget_tag {
+                ul {
+                    margin: 0;
+                    padding: 0;
+                    li{
+                        margin-bottom: 15px;
+                        display: block;
+                        &:last-child {
+                            margin-bottom: 0;
+                        }
+                        a {
+                            color: $text_white;
+                            padding: 10px 15px;
+                            display: block;
+                            line-height: 26px;
+                            border-radius: 15px;
+                            background-color: $primary_color;
+                            text-transform: uppercase;
+                            transition: .5s all;
+                            &:hover {
+                                background-color: $secondary_color;
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }
@@ -3589,8 +3649,6 @@ p {
             .ws__blog_right {
                 .widget {
                     margin-bottom: 30px;
-                }
-                .search__box {
                     padding: 15px;
                 }
             }
