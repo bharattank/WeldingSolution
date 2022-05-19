@@ -3585,22 +3585,26 @@ p {
                     margin: 0;
                     padding: 0;
                     li{
-                        margin-bottom: 15px;
-                        display: block;
+                        margin-bottom: 10px;
+                        margin-right: 8px;
+                        display: inline-block;
                         &:last-child {
                             margin-bottom: 0;
                         }
                         a {
-                            color: $text_white;
+                            color: $primary_color;
                             padding: 10px 15px;
                             display: block;
                             line-height: 26px;
-                            border-radius: 15px;
-                            background-color: $primary_color;
+                            border-radius: 5px;
+                            background-color: transparent;
                             text-transform: uppercase;
                             transition: .5s all;
+                            border: 1px solid $primary_color;
                             &:hover {
                                 background-color: $secondary_color;
+                                color: $text_white;
+                                border: 1px solid $secondary_color;
                             }
                         }
                     }
