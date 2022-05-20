@@ -1409,6 +1409,10 @@ p {
   margin-right: 15px;
 }
 
+.can-expect .expect-right .expect-img-name img {
+  margin-right: 15px;
+}
+
 @media screen and (min-width: 992px) and (max-width: 1199px) {
   .can-expect {
     padding: 230px 0 40px 0;
