@@ -3815,7 +3815,7 @@ p {
 
 // Page Loader
 $dark-grey: #393E46;
-$orange: #D65A31;
+$orange: $secondary_color;
 
 @keyframes rotate{
   from{ transform: translate(-50%, -50%) rotate(0); }
